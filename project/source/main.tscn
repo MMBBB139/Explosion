@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyp4viirq5heh"]
+
+[ext_resource type="PackedScene" uid="uid://5ij3nn0epsej" path="res://source/building.tscn" id="1_tb6m1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vceju"]
+size = Vector3(40, 0.5, 40)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2d5bf"]
+size = Vector3(40, 0.5, 40)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_et1k5"]
+albedo_color = Color(0.454902, 0.505882, 0.356863, 1)
+
+[node name="Main" type="Node3D"]
+
+[node name="building" parent="." instance=ExtResource("1_tb6m1")]
+
+[node name="ground" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+shape = SubResource("BoxShape3D_vceju")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+mesh = SubResource("BoxMesh_2d5bf")
+surface_material_override/0 = SubResource("StandardMaterial3D_et1k5")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.999986, 0, -0.00530571, 0, 1, 0, 0.00530571, 0, -0.999986, 0, 1.31182, -12.5747)

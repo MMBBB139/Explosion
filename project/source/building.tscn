@@ -4,14 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://w2yudtiamkxa" path="res://source/glassBlock.tscn" id="2_it5rd"]
 [ext_resource type="PackedScene" uid="uid://bdax3o4j8eid5" path="res://wood_block.tscn" id="3_liur8"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_3achm"]
-size = Vector3(40, 1, 40)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_1amyc"]
 size = Vector3(15, 0.5, 10)
 
 [sub_resource type="BoxMesh" id="BoxMesh_mkd0e"]
 size = Vector3(15, 0.5, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rgpvp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pwy12"]
 size = Vector3(4, 1, 0.5)
@@ -21,26 +20,21 @@ size = Vector3(4, 1, 0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2di31"]
 
-[node name="setting" type="Node3D"]
+[node name="building" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.760941, -0.57092, 0.308253, 0.201797, 0.659786, 0.723851, -0.616642, -0.488603, 0.617268, 12.7209, 7.37059, 3.35672)
 
-[node name="ground" type="StaticBody3D" parent="."]
+[node name="floor" type="RigidBody3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ground"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-shape = SubResource("BoxShape3D_3achm")
-
-[node name="RigidBody3D" type="RigidBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("BoxShape3D_1amyc")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("BoxMesh_mkd0e")
+surface_material_override/0 = SubResource("StandardMaterial3D_rgpvp")
 
 [node name="solidWall" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -7.25, 6, -5.5)
