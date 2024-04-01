@@ -1,9 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://dyp4viirq5heh"]
+[gd_scene load_steps=8 format=3 uid="uid://dyp4viirq5heh"]
 
 [ext_resource type="PackedScene" uid="uid://5ij3nn0epsej" path="res://source/oldBuildingModularBlocksVersion.tscn" id="1_tb6m1"]
 [ext_resource type="PackedScene" uid="uid://7jb8qwa6k8uq" path="res://house.tscn" id="1_uo6t7"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_7k8cq"]
+margin = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_4nyeq"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_vceju"]
+margin = 0.0
 size = Vector3(40, 0.5, 40)
 
 [sub_resource type="BoxMesh" id="BoxMesh_2d5bf"]
@@ -14,6 +20,26 @@ albedo_color = Color(0.454902, 0.505882, 0.356863, 1)
 
 [node name="Main" type="Node3D"]
 
+[node name="test2" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.33057, 0)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="test2"]
+shape = SubResource("BoxShape3D_7k8cq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="test2"]
+mesh = SubResource("BoxMesh_4nyeq")
+
+[node name="test" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.40616, 0)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="test"]
+shape = SubResource("BoxShape3D_7k8cq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="test"]
+mesh = SubResource("BoxMesh_4nyeq")
+
 [node name="house" parent="." instance=ExtResource("1_uo6t7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.16548, 0)
 
@@ -21,13 +47,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.16548, 0)
 visible = false
 
 [node name="ground" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.360828, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ground"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 shape = SubResource("BoxShape3D_vceju")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ground"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.366244, 0)
 mesh = SubResource("BoxMesh_2d5bf")
 surface_material_override/0 = SubResource("StandardMaterial3D_et1k5")
 
