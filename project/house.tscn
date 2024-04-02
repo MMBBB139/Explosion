@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://7jb8qwa6k8uq"]
+[gd_scene load_steps=62 format=3 uid="uid://7jb8qwa6k8uq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ju0r2"]
 margin = 0.0
@@ -169,6 +169,8 @@ size = Vector3(0.5, 4.5, 3.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ier0e"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4jte0"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_v4768"]
 size = Vector3(0.5, 5.5, 2.5)
 
@@ -197,6 +199,7 @@ size = Vector3(9, 0.5, 6.5)
 albedo_color = Color(0.403922, 0.403922, 0.403922, 1)
 
 [node name="house" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [node name="floor" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
@@ -380,6 +383,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ier0e")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, 2.25, 7.25)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="wall2"]
+physics_material_override = SubResource("PhysicsMaterial_4jte0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="wall2/RigidBody3D"]
 shape = SubResource("BoxShape3D_icqhv")
@@ -420,7 +424,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ier0e")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.25, 2.25, -0.8)
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
 shape = SubResource("BoxShape3D_v4768")
@@ -431,7 +434,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_rod7k")
 
 [node name="RigidBody3D2" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.25, 2.25, -0.8)
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D2"]
 shape = SubResource("BoxShape3D_v4768")
@@ -442,7 +444,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_rod7k")
 
 [node name="RigidBody3D5" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.25, -0.8)
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D5"]
 shape = SubResource("BoxShape3D_f7x7q")

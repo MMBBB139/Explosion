@@ -1,12 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dyp4viirq5heh"]
+[gd_scene load_steps=5 format=3 uid="uid://dyp4viirq5heh"]
 
-[ext_resource type="PackedScene" uid="uid://5ij3nn0epsej" path="res://source/oldBuildingModularBlocksVersion.tscn" id="1_tb6m1"]
 [ext_resource type="PackedScene" uid="uid://7jb8qwa6k8uq" path="res://house.tscn" id="1_uo6t7"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_7k8cq"]
-margin = 0.0
-
-[sub_resource type="BoxMesh" id="BoxMesh_4nyeq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vceju"]
 margin = 0.0
@@ -20,31 +14,8 @@ albedo_color = Color(0.454902, 0.505882, 0.356863, 1)
 
 [node name="Main" type="Node3D"]
 
-[node name="test2" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.33057, 0)
-visible = false
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="test2"]
-shape = SubResource("BoxShape3D_7k8cq")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="test2"]
-mesh = SubResource("BoxMesh_4nyeq")
-
-[node name="test" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.40616, 0)
-visible = false
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="test"]
-shape = SubResource("BoxShape3D_7k8cq")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="test"]
-mesh = SubResource("BoxMesh_4nyeq")
-
 [node name="house" parent="." instance=ExtResource("1_uo6t7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.16548, 0)
-
-[node name="building" parent="." instance=ExtResource("1_tb6m1")]
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="ground" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.360828, 0)
@@ -53,12 +24,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.360828, 0)
 shape = SubResource("BoxShape3D_vceju")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ground"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.366244, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 mesh = SubResource("BoxMesh_2d5bf")
 surface_material_override/0 = SubResource("StandardMaterial3D_et1k5")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.999986, 0, -0.00530571, 0, 1, 0, 0.00530571, 0, -0.999986, 0, 1.31182, -12.5747)
 
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.240585, -0.866932, -0.436518, -0.581693, -0.231241, 0.779846, -0.777015, 0.441538, -0.448655, -13.443, 19.3155, -26.547)
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.458526, -0.864828, -0.204517, 0.596013, 0.128562, 0.792616, -0.659184, -0.48533, 0.574397, -6.34986, 17.2458, 23.562)
+transform = Transform3D(0.458526, -0.864828, -0.204517, 0.596013, 0.128562, 0.792616, -0.659184, -0.48533, 0.574397, -6.24989, 17.2458, 23.562)
+visible = false
