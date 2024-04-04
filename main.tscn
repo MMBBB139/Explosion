@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://dyp4viirq5heh"]
 
-[ext_resource type="Script" path="res://source/main.gd" id="1_j4vd8"]
+[ext_resource type="Script" path="res://main.gd" id="1_j4vd8"]
 [ext_resource type="PackedScene" uid="uid://7jb8qwa6k8uq" path="res://house.tscn" id="1_uo6t7"]
-[ext_resource type="Script" path="res://source/CharacterBody3D.gd" id="2_16uq1"]
+[ext_resource type="Script" path="res://CharacterBody3D.gd" id="2_16uq1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vceju"]
 margin = 0.0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://5ij3nn0epsej"]
 
-[ext_resource type="PackedScene" uid="uid://4qxga6s5qw48" path="res://source/block.tscn" id="1_ods2s"]
-[ext_resource type="PackedScene" uid="uid://w2yudtiamkxa" path="res://source/glassBlock.tscn" id="2_it5rd"]
+[ext_resource type="PackedScene" uid="uid://4qxga6s5qw48" path="res://block.tscn" id="1_ods2s"]
+[ext_resource type="PackedScene" uid="uid://w2yudtiamkxa" path="res://glassBlock.tscn" id="2_it5rd"]
 [ext_resource type="PackedScene" uid="uid://bdax3o4j8eid5" path="res://wood_block.tscn" id="3_liur8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1amyc"]
