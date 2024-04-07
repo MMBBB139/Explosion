@@ -1,6 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://c0tkv43s88ehi"]
+[gd_scene load_steps=12 format=3 uid="uid://c0tkv43s88ehi"]
 
 [ext_resource type="Texture2D" uid="uid://dcxti7wq0xkc" path="res://particle_sprite_smoke.webp" id="1_vs2vt"]
+[ext_resource type="AudioStream" uid="uid://cregyvq5gos2p" path="res://audio/explosion sound - 4_7_24, 2.12 PM.mp3" id="2_pckmg"]
+[ext_resource type="AudioStream" uid="uid://es3bos7uqbn2" path="res://audio/impactGlass_medium_002.ogg" id="3_hwfcp"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_pqh45"]
 size = Vector3(1, 0.1, 1)
@@ -87,3 +89,9 @@ preprocess = 1.5
 explosiveness = 0.35
 process_material = SubResource("ParticleProcessMaterial_l2o58")
 draw_pass_1 = SubResource("QuadMesh_canjy")
+
+[node name="explode" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_pckmg")
+
+[node name="bombPlacing" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_hwfcp")

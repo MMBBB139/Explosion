@@ -1,4 +1,5 @@
+res://main.gd
 res://main.tscn
-res://house.tscn
+res://AudioStreamPlayer3D.gd
 res://bomb.tscn
-res://block.tscn
+res://house.tscn

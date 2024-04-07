@@ -1,19 +1,24 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1712521852
-block.tscn::PackedScene::2069913763912473523::1712519367::0::1::::<><>::
-bomb.tscn::PackedScene::6567431874558731358::1712521437::0::1::::<><>::uid://dcxti7wq0xkc::::res://particle_sprite_smoke.webp
+::res://::1712528101
+block.tscn::PackedScene::2069913763912473523::1712522218::0::1::::<><>::
+bomb.tscn::PackedScene::6567431874558731358::1712522218::0::1::::<><>::uid://dcxti7wq0xkc::::res://particle_sprite_smoke.webp
 CharacterBody3D.gd::GDScript::-1::1712369970::0::1::::<>CharacterBody3D<>::
 glassBlock.tscn::PackedScene::1601385870386121174::1712369970::0::1::::<><>::
-house.tscn::PackedScene::2264742918796360060::1712519366::0::1::::<><>::
+house.tscn::PackedScene::2264742918796360060::1712522217::0::1::::<><>::
 icon.svg::CompressedTexture2D::7480593740069699196::1712369970::1712369970::1::::<><>::
-improved smoke sprite sheet.png::::-1::1712521848::0::0::::<><>::
 main.gd::GDScript::-1::1712369971::0::1::::<>Node3D<>::
-main.tscn::PackedScene::8876558692505414715::1712519366::0::1::::<><>::res://main.gd<>uid://7jb8qwa6k8uq::::res://house.tscn<>res://CharacterBody3D.gd
+main.tscn::PackedScene::8876558692505414715::1712522217::0::1::::<><>::res://main.gd<>uid://7jb8qwa6k8uq::::res://house.tscn<>res://CharacterBody3D.gd
 oldBuildingModularBlocksVersion.tscn::PackedScene::2122777490365535729::1712369971::0::1::::<><>::uid://4qxga6s5qw48::::res://block.tscn<>uid://w2yudtiamkxa::::res://glassBlock.tscn<>uid://bdax3o4j8eid5::::res://wood_block.tscn
 particle_sprite_smoke.webp::CompressedTexture2D::216126177982551098::1712518118::1712518170::1::::<><>::
 README.md::TextFile::-1::1711819859::0::1::::<><>::
 smoke_04.png::CompressedTexture2D::8602569718230488268::1712516642::1712516642::1::::<><>::
 wood_block.tscn::PackedScene::2598434488249578548::1712369971::0::1::::<><>::
+::res://audio/::1712528101
+click2.ogg::AudioStreamOggVorbis::7266733248265135504::1712525222::1712525241::1::::<><>::
+explosion sound - 4_7_24, 2.12 PM.mp3::AudioStreamMP3::5974717510338184445::1712525222::1712525241::1::::<><>::
+impactGlass_medium_002.ogg::AudioStreamOggVorbis::319616800331243673::1712525222::1712525249::1::::<><>::
+impactWood_heavy_003.ogg::AudioStreamOggVorbis::7696118780247127609::1712525222::1712525249::1::::<><>::
+relaxing background music- 4_7_24, 3.09 PM.mp3::AudioStreamMP3::5071873380624936833::1712528083::1712528101::1::::<><>::
 ::res://joltPhysics/::1712370003
 ::res://joltPhysics/addons/::1712370003
 ::res://joltPhysics/addons/godot-jolt/::1712370003
