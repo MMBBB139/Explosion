@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dyp4viirq5heh"]
+[gd_scene load_steps=12 format=3 uid="uid://dyp4viirq5heh"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_j4vd8"]
 [ext_resource type="PackedScene" uid="uid://7jb8qwa6k8uq" path="res://house.tscn" id="1_uo6t7"]
@@ -17,6 +17,16 @@ albedo_color = Color(0.454902, 0.505882, 0.356863, 1)
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_p3k6w"]
 
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_fd0kj"]
+
+[sub_resource type="Sky" id="Sky_a4c88"]
+sky_material = SubResource("PhysicalSkyMaterial_fd0kj")
+
+[sub_resource type="Environment" id="Environment_lugxs"]
+background_mode = 2
+sky = SubResource("Sky_a4c88")
+ambient_light_color = Color(0.560784, 0.854902, 1, 1)
+
 [node name="Main" type="Node3D"]
 script = ExtResource("1_j4vd8")
 
@@ -34,14 +44,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 mesh = SubResource("BoxMesh_2d5bf")
 surface_material_override/0 = SubResource("StandardMaterial3D_et1k5")
 
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.240585, -0.866932, -0.436518, -0.581693, -0.231241, 0.779846, -0.777015, 0.441538, -0.448655, -13.443, 19.3155, -26.547)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.458526, -0.864828, -0.204517, 0.596013, 0.128562, 0.792616, -0.659184, -0.48533, 0.574397, -6.24989, 17.2458, 23.562)
-visible = false
+[node name="mainLight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.267864, 0.862146, -0.430061, 0.334687, 0.501841, 0.797584, 0.903456, 0.0697086, -0.422974, -13.3032, 17.2458, 23.562)
+light_color = Color(1, 1, 0.894118, 1)
+light_energy = 4.0
+shadow_enabled = true
+shadow_opacity = 0.77
+directional_shadow_fade_start = 0.219
+directional_shadow_max_distance = 76.1
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18.3378, -16.2424)
+visible = false
 script = ExtResource("2_16uq1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
@@ -56,5 +70,11 @@ transform = Transform3D(-0.999986, 0, -0.00530571, 0, 1, 0, 0.00530571, 0, -0.99
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("4_08ra7")
 autoplay = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 14.0271, -11.0975)
+
+[node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_lugxs")
 
 [connection signal="finished" from="AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]
