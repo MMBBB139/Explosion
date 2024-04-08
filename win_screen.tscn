@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://30po0sghk4ui"]
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 646.0
+color = Color(0.858824, 0.619608, 0.0784314, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 42.0
+offset_right = 1183.0
+offset_bottom = 211.0
+theme_override_font_sizes/font_size = 50
+text = "Congratulations!
+ You successfully destroyed the building! "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 361.0
+offset_right = 740.0
+offset_bottom = 472.0
+theme_override_font_sizes/font_size = 60
+text = "Restart"
