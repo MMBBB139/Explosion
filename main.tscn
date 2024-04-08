@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dyp4viirq5heh"]
+[gd_scene load_steps=17 format=3 uid="uid://dyp4viirq5heh"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_j4vd8"]
 [ext_resource type="PackedScene" uid="uid://7jb8qwa6k8uq" path="res://house.tscn" id="1_uo6t7"]
@@ -27,6 +27,29 @@ background_mode = 2
 sky = SubResource("Sky_a4c88")
 ambient_light_color = Color(0.560784, 0.854902, 1, 1)
 
+[sub_resource type="QuadMesh" id="QuadMesh_2lcm0"]
+lightmap_size_hint = Vector2i(52, 52)
+size = Vector2(17, 20)
+orientation = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a68ji"]
+transparency = 1
+albedo_color = Color(1, 0.129412, 0.117647, 0.243137)
+
+[sub_resource type="QuadMesh" id="QuadMesh_2l0qj"]
+flip_faces = true
+size = Vector2(17, 20)
+orientation = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ao6av"]
+transparency = 1
+albedo_color = Color(1, 0.129412, 0.117647, 0.243137)
+backlight_enabled = true
+backlight = Color(1, 0.129412, 0.117647, 0.243137)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cbq04"]
+size = Vector3(17, 10, 20)
+
 [node name="Main" type="Node3D"]
 script = ExtResource("1_j4vd8")
 
@@ -44,8 +67,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 mesh = SubResource("BoxMesh_2d5bf")
 surface_material_override/0 = SubResource("StandardMaterial3D_et1k5")
 
-[node name="mainLight" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.267864, 0.862146, -0.430061, 0.334687, 0.501841, 0.797584, 0.903456, 0.0697086, -0.422974, -13.3032, 17.2458, 23.562)
+[node name="keyLight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.391316, 0.536991, -0.747337, 0.175038, 0.840703, 0.512426, 0.903456, 0.0697082, -0.422975, -31.2866, 14.7955, -18.79)
 light_color = Color(1, 1, 0.894118, 1)
 light_energy = 4.0
 shadow_enabled = true
@@ -65,16 +88,41 @@ shape = SubResource("SeparationRayShape3D_p3k6w")
 [node name="Camera" type="Node3D" parent="CharacterBody3D"]
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Camera"]
-transform = Transform3D(-0.999986, 0, -0.00530571, 0, 1, 0, 0.00530571, 0, -0.999986, 2.08165e-12, 2.08165e-12, -12.575)
+transform = Transform3D(-0.999986, 0, -0.00530571, 0, 1, 0, 0.00530571, 0, -0.999986, 2.08165e-12, 0, -12.575)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("4_08ra7")
 autoplay = true
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 14.0271, -11.0975)
+[node name="fillLight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.993015, 0, 0.117988, 0, 1, 0, -0.117988, 0, 0.993015, -11.3411, 4.57603, 14.2049)
+light_color = Color(0.984314, 0.964706, 0.886275, 1)
+sky_mode = 1
 
 [node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_lugxs")
+
+[node name="fillLight2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.87302, -0.167459, 0.458032, -0.338372, -0.884342, 0.321626, 0.351197, -0.435771, -0.828712, 14.0968, 2.2217, -3.07916)
+visible = false
+light_energy = 0.5
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.18457, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 0.999765, -0.0216751, 0, 0.0216751, 0.999765, 0, 0, 0)
+mesh = SubResource("QuadMesh_2lcm0")
+surface_material_override/0 = SubResource("StandardMaterial3D_a68ji")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D"]
+mesh = SubResource("QuadMesh_2l0qj")
+surface_material_override/0 = SubResource("StandardMaterial3D_ao6av")
+
+[node name="Area3D" type="Area3D" parent="Node3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+shape = SubResource("BoxShape3D_cbq04")
 
 [connection signal="finished" from="AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]

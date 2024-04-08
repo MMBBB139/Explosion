@@ -1,12 +1,13 @@
+CollisionShape3D
+Area3D
+MeshInstance3D
+Node3D
 DirectionalLight3D
 OmniLight3D
 WorldEnvironment
 AudioStreamPlayer3D
 GPUParticles3D
-Node3D
 Timer
 Camera3D
-MeshInstance3D
-CollisionShape3D
 CharacterBody3D
 MultiplayerSpawner
