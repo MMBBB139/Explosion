@@ -1,1 +1,7 @@
+res://bomb.tscn
+res://block.tscn
+res://house.tscn
 res://main.tscn
+res://win_screen.tscn
+res://dead_screen.tscn
+res://instructions.tscn
