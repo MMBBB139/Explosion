@@ -1,8 +1,9 @@
+Label
+ColorRect
+Control
 Sprite3D
 AudioStreamPlayer
 Button
-Label
-ColorRect
 CollisionShape3D
 Area3D
 MeshInstance3D
@@ -11,5 +12,3 @@ DirectionalLight3D
 OmniLight3D
 WorldEnvironment
 AudioStreamPlayer3D
-GPUParticles3D
-Timer

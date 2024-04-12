@@ -1,54 +1,52 @@
-[gd_scene load_steps=4 format=3 uid="uid://bryemj3nhtfid"]
+[gd_scene load_steps=3 format=3 uid="uid://b2wbqbeyqhn1r"]
 
-[ext_resource type="AudioStream" uid="uid://dbscbgmlnjokm" path="res://audio/click2.ogg" id="1_00gye"]
-[ext_resource type="Texture2D" uid="uid://c17xqi648gxeu" path="res://Screenshot 2024-04-11 at 6.46.26 PM.png" id="1_54im7"]
-[ext_resource type="Texture2D" uid="uid://bwvk4hcnr3sbt" path="res://Screenshot 2024-04-11 at 7.50.19 PM.png" id="2_72caj"]
+[ext_resource type="Texture2D" uid="uid://c17xqi648gxeu" path="res://Screenshot 2024-04-11 at 6.46.26 PM.png" id="1_rxm1o"]
+[ext_resource type="AudioStream" uid="uid://dbscbgmlnjokm" path="res://audio/click2.ogg" id="2_ei5by"]
 
-[node name="Instructions" type="Control"]
+[node name="FailUI" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 1156.0
+offset_bottom = 645.0
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect2" type="ColorRect" parent="."]
 offset_right = 1152.0
 offset_bottom = 648.0
-color = Color(0.858824, 0.619608, 0.0784314, 1)
+color = Color(0, 0, 0, 0.223529)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 191.0
+offset_top = 120.0
+offset_right = 993.0
+offset_bottom = 515.0
+color = Color(0.858824, 0.619608, 0.0784314, 0.572549)
 
 [node name="Screenshot2024-04-11At6_46_26 pm" type="Sprite2D" parent="."]
-position = Vector2(658, 105)
+position = Vector2(635, 216)
 rotation = -0.127409
-scale = Vector2(1, 0.629026)
-texture = ExtResource("1_54im7")
+scale = Vector2(0.7, 0.44)
+texture = ExtResource("1_rxm1o")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 199.0
-offset_top = 44.0
-offset_right = 973.0
-offset_bottom = 321.0
+offset_left = 190.0
+offset_top = 103.0
+offset_right = 964.0
+offset_bottom = 380.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 75
-text = "Instructions
-
+theme_override_font_sizes/font_size = 60
+text = "Noooo!
 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Screenshot2024-04-11At7_50_19 pm" type="Sprite2D" parent="."]
-position = Vector2(227, 333.5)
-scale = Vector2(1, 0.921429)
-texture = ExtResource("2_72caj")
-
 [node name="Label2" type="Label" parent="."]
-offset_left = 37.0
-offset_top = 234.0
-offset_right = 1060.0
-offset_bottom = 663.0
+offset_left = 322.0
+offset_top = 185.0
+offset_right = 849.0
+offset_bottom = 614.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-text = "Add instructions here once mechanics are done
+theme_override_font_sizes/font_size = 40
+text = "The building still stands. 
 
 
 "
@@ -73,10 +71,10 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Button" type="Button" parent="."]
-offset_left = 414.0
-offset_top = 507.0
-offset_right = 730.0
-offset_bottom = 620.0
+offset_left = 446.0
+offset_top = 383.0
+offset_right = 728.0
+offset_bottom = 487.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_normal_color = Color(0.858824, 0.619608, 0.0784314, 1)
 theme_override_colors/icon_pressed_color = Color(0.858824, 0.619608, 0.0784314, 1)
@@ -85,8 +83,8 @@ theme_override_colors/icon_hover_pressed_color = Color(0.858824, 0.619608, 0.078
 theme_override_colors/icon_focus_color = Color(0.858824, 0.619608, 0.0784314, 1)
 theme_override_colors/icon_disabled_color = Color(0.858824, 0.619608, 0.0784314, 1)
 theme_override_font_sizes/font_size = 70
-text = "Start
+text = "Restart
 "
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_00gye")
+stream = ExtResource("2_ei5by")

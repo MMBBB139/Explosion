@@ -1,20 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://30po0sghk4ui"]
+[gd_scene load_steps=4 format=3 uid="uid://b11hvhhkgv8s1"]
 
-[ext_resource type="Script" path="res://win_screen.gd" id="1_plra7"]
-[ext_resource type="Texture2D" uid="uid://c17xqi648gxeu" path="res://Screenshot 2024-04-11 at 6.46.26 PM.png" id="2_0j5bu"]
-[ext_resource type="Texture2D" uid="uid://bwvk4hcnr3sbt" path="res://Screenshot 2024-04-11 at 7.50.19 PM.png" id="3_vgdc5"]
-[ext_resource type="AudioStream" uid="uid://dbscbgmlnjokm" path="res://audio/click2.ogg" id="4_uy6lm"]
+[ext_resource type="Texture2D" uid="uid://c17xqi648gxeu" path="res://Screenshot 2024-04-11 at 6.46.26 PM.png" id="1_sxxgq"]
+[ext_resource type="Texture2D" uid="uid://bwvk4hcnr3sbt" path="res://Screenshot 2024-04-11 at 7.50.19 PM.png" id="2_6sjmt"]
+[ext_resource type="AudioStream" uid="uid://dbscbgmlnjokm" path="res://audio/click2.ogg" id="3_6dse7"]
 
-[node name="WinScreen" type="Control"]
+[node name="Premise" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_plra7")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0.858824, 0.619608, 0.0784314, 1)
@@ -23,7 +22,7 @@ color = Color(0.858824, 0.619608, 0.0784314, 1)
 position = Vector2(658, 105)
 rotation = -0.127409
 scale = Vector2(1, 0.629026)
-texture = ExtResource("2_0j5bu")
+texture = ExtResource("1_sxxgq")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 199.0
@@ -31,8 +30,8 @@ offset_top = 44.0
 offset_right = 973.0
 offset_bottom = 321.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 60
-text = "Congratulations!
+theme_override_font_sizes/font_size = 80
+text = "Explosion!
 
 "
 horizontal_alignment = 1
@@ -41,16 +40,17 @@ vertical_alignment = 1
 [node name="Screenshot2024-04-11At7_50_19 pm" type="Sprite2D" parent="."]
 position = Vector2(227, 333.5)
 scale = Vector2(1, 0.921429)
-texture = ExtResource("3_vgdc5")
+texture = ExtResource("2_6sjmt")
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 22.0
-offset_top = 261.0
-offset_right = 549.0
-offset_bottom = 690.0
+layout_mode = 0
+offset_left = 37.0
+offset_top = 234.0
+offset_right = 1060.0
+offset_bottom = 663.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-text = "You successfully destroyed the building and created essential habitat!
+theme_override_font_sizes/font_size = 30
+text = "You are a demolition expert who has been hired to destroy a house illegally built on land containing protected habitat for the endangered Mexican Prarie Dog. You need to destroy the house using as few explosive charges as possible to minimize the impact on the habitat. 
 
 
 "
@@ -60,6 +60,7 @@ autowrap_mode = 2
 
 [node name="Label3" type="Label" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 19.0
 offset_top = 396.0
 offset_right = 1111.0
@@ -75,6 +76,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 414.0
 offset_top = 507.0
 offset_right = 730.0
@@ -87,38 +89,7 @@ theme_override_colors/icon_hover_pressed_color = Color(0.858824, 0.619608, 0.078
 theme_override_colors/icon_focus_color = Color(0.858824, 0.619608, 0.0784314, 1)
 theme_override_colors/icon_disabled_color = Color(0.858824, 0.619608, 0.0784314, 1)
 theme_override_font_sizes/font_size = 70
-text = "Start
-"
+text = "Next"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_uy6lm")
-
-[node name="ExplosivesUsed" type="Label" parent="."]
-offset_left = 436.0
-offset_top = 332.0
-offset_right = 963.0
-offset_bottom = 503.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-text = "Explosives used:
-
-
-"
-horizontal_alignment = 2
-vertical_alignment = 1
-autowrap_mode = 2
-
-[node name="Record" type="Label" parent="."]
-offset_left = 433.0
-offset_top = 386.0
-offset_right = 960.0
-offset_bottom = 557.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-text = "Record:
-
-
-"
-horizontal_alignment = 2
-vertical_alignment = 1
-autowrap_mode = 2
+stream = ExtResource("3_6dse7")

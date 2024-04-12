@@ -1,9 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://dyp4viirq5heh"]
+[gd_scene load_steps=19 format=3 uid="uid://dyp4viirq5heh"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_j4vd8"]
 [ext_resource type="PackedScene" uid="uid://7jb8qwa6k8uq" path="res://house.tscn" id="1_uo6t7"]
 [ext_resource type="Script" path="res://CharacterBody3D.gd" id="2_16uq1"]
 [ext_resource type="AudioStream" uid="uid://cei4apxkvssgn" path="res://audio/relaxing background music- 4_7_24, 3.09 PM.mp3" id="4_08ra7"]
+[ext_resource type="Script" path="res://BombsPlacedIndicator.gd" id="5_tjpln"]
+[ext_resource type="PackedScene" uid="uid://b2wbqbeyqhn1r" path="res://fail_ui.tscn" id="6_nsgdu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vceju"]
 margin = 0.0
@@ -124,5 +126,33 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ao6av")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 shape = SubResource("BoxShape3D_cbq04")
+
+[node name="BombsPlacedIndicator" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 850.0
+offset_top = 7.0
+offset_right = 1145.0
+offset_bottom = 67.0
+script = ExtResource("5_tjpln")
+
+[node name="ColorRect" type="ColorRect" parent="BombsPlacedIndicator"]
+layout_mode = 0
+offset_right = 293.0
+offset_bottom = 47.0
+color = Color(0.227451, 0.227451, 0.227451, 0.443137)
+
+[node name="Label" type="Label" parent="BombsPlacedIndicator"]
+layout_mode = 0
+offset_right = 283.0
+offset_bottom = 38.0
+text = "Bombs Placed: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FailUI" parent="." instance=ExtResource("6_nsgdu")]
+visible = false
+offset_right = 1153.0
+offset_bottom = 651.0
 
 [connection signal="finished" from="AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]
