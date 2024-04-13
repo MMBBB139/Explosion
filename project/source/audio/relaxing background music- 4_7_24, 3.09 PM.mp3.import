@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cei4apxkvssgn"
+path="res://.godot/imported/relaxing background music- 4_7_24, 3.09 PM.mp3-6b37a7228e9e2da29805fb83a8167cb4.mp3str"
+
+[deps]
+
+source_file="res://source/audio/relaxing background music- 4_7_24, 3.09 PM.mp3"
+dest_files=["res://.godot/imported/relaxing background music- 4_7_24, 3.09 PM.mp3-6b37a7228e9e2da29805fb83a8167cb4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
