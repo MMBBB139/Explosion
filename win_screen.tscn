@@ -15,6 +15,7 @@ grow_vertical = 2
 script = ExtResource("1_plra7")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0.858824, 0.619608, 0.0784314, 1)
@@ -26,6 +27,7 @@ scale = Vector2(1, 0.629026)
 texture = ExtResource("2_0j5bu")
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 199.0
 offset_top = 44.0
 offset_right = 973.0
@@ -44,6 +46,7 @@ scale = Vector2(1, 0.921429)
 texture = ExtResource("3_vgdc5")
 
 [node name="Label2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 22.0
 offset_top = 261.0
 offset_right = 549.0
@@ -60,6 +63,7 @@ autowrap_mode = 2
 
 [node name="Label3" type="Label" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 19.0
 offset_top = 396.0
 offset_right = 1111.0
@@ -75,6 +79,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 414.0
 offset_top = 507.0
 offset_right = 730.0
@@ -94,6 +99,7 @@ text = "Start
 stream = ExtResource("4_uy6lm")
 
 [node name="ExplosivesUsed" type="Label" parent="."]
+layout_mode = 0
 offset_left = 436.0
 offset_top = 332.0
 offset_right = 963.0
@@ -109,6 +115,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Record" type="Label" parent="."]
+layout_mode = 0
 offset_left = 433.0
 offset_top = 386.0
 offset_right = 960.0

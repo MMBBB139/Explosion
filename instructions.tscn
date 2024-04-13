@@ -13,6 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0.858824, 0.619608, 0.0784314, 1)
@@ -24,6 +25,7 @@ scale = Vector2(1, 0.629026)
 texture = ExtResource("1_54im7")
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 199.0
 offset_top = 44.0
 offset_right = 973.0
@@ -42,6 +44,7 @@ scale = Vector2(1, 0.921429)
 texture = ExtResource("2_72caj")
 
 [node name="Label2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 37.0
 offset_top = 234.0
 offset_right = 1060.0
@@ -58,6 +61,7 @@ autowrap_mode = 2
 
 [node name="Label3" type="Label" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 19.0
 offset_top = 396.0
 offset_right = 1111.0
@@ -73,6 +77,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 414.0
 offset_top = 507.0
 offset_right = 730.0

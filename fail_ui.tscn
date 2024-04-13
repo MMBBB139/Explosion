@@ -10,11 +10,13 @@ offset_right = 1156.0
 offset_bottom = 645.0
 
 [node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 0.223529)
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 191.0
 offset_top = 120.0
 offset_right = 993.0
@@ -28,6 +30,7 @@ scale = Vector2(0.7, 0.44)
 texture = ExtResource("1_rxm1o")
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 190.0
 offset_top = 103.0
 offset_right = 964.0
@@ -40,6 +43,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 322.0
 offset_top = 185.0
 offset_right = 849.0
@@ -56,6 +60,7 @@ autowrap_mode = 2
 
 [node name="Label3" type="Label" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 19.0
 offset_top = 396.0
 offset_right = 1111.0
@@ -71,6 +76,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 446.0
 offset_top = 383.0
 offset_right = 728.0

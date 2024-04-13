@@ -25,6 +25,7 @@ scale = Vector2(1, 0.629026)
 texture = ExtResource("1_sxxgq")
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 199.0
 offset_top = 44.0
 offset_right = 973.0
@@ -50,7 +51,7 @@ offset_right = 1060.0
 offset_bottom = 663.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
-text = "You are a demolition expert who has been hired to destroy a house illegally built on land containing protected habitat for the endangered Mexican Prarie Dog. You need to destroy the house using as few explosive charges as possible to minimize the impact on the habitat. 
+text = "You are a demolition expert who has been hired to destroy a house illegally built on land containing protected habitat for the endangered Giant Poppy. You need to destroy the house using as few explosive charges as possible to minimize the impact on the habitat. 
 
 
 "
