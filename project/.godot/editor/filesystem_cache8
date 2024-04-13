@@ -1,0 +1,109 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1712992654
+AudioStreamPlayer3D.gd::GDScript::-1::1712831910::0::1::::<>AudioStreamPlayer3D<>::
+block.tscn::PackedScene::2069913763912473523::1712989938::0::1::::<><>::
+bomb.tscn::PackedScene::6567431874558731358::1712989938::0::1::::<><>::uid://dcxti7wq0xkc::::res://particle_sprite_smoke.webp<>uid://cregyvq5gos2p::::res://audio/explosion sound - 4_7_24, 2.12 PM.mp3<>uid://es3bos7uqbn2::::res://audio/impactGlass_medium_002.ogg<>uid://dvet7tsq5ivic::::res://Screenshot 2024-04-11 at 6.16.56 PM.png
+BombsPlacedIndicator.gd::GDScript::-1::1712989355::0::1::::<>Control<>::
+CharacterBody3D.gd::GDScript::-1::1712304058::0::1::::<>CharacterBody3D<>::
+dead_screen.tscn::PackedScene::516538734492431288::1712989939::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1712990365::0::1::::<><>::
+fail_ui.tscn::PackedScene::4327025122019225713::1712989939::0::1::::<><>::uid://c17xqi648gxeu::::res://Screenshot 2024-04-11 at 6.46.26 PM.png<>uid://dbscbgmlnjokm::::res://audio/click2.ogg
+flower.obj::Mesh::1091806103361648756::1712989355::1712992656::1::::<><>::
+flower.tscn::PackedScene::2391423730715290055::1712989939::0::1::::<><>::uid://ps45fm7b1o4c::::res://flower.obj
+glassBlock.tscn::PackedScene::1601385870386121174::1712304058::0::1::::<><>::
+global.gd::GDScript::-1::1712989355::0::1::::<>Node<>::
+house.tscn::PackedScene::2264742918796360060::1712989939::0::1::::<><>::uid://dhwb7mnh0lkeb::::res://audio/impactWood_heavy_003.ogg
+icon.svg::CompressedTexture2D::7480593740069699196::1712304058::1712992656::1::::<><>::
+instructions.tscn::PackedScene::3629440905700453455::1712989939::0::1::::<><>::uid://dbscbgmlnjokm::::res://audio/click2.ogg<>uid://c17xqi648gxeu::::res://Screenshot 2024-04-11 at 6.46.26 PM.png<>uid://bwvk4hcnr3sbt::::res://Screenshot 2024-04-11 at 7.50.19 PM.png
+main.gd::GDScript::-1::1712831910::0::1::::<>Node3D<>::
+main.tscn::PackedScene::8876558692505414715::1712989960::0::1::::<><>::res://main.gd<>uid://7jb8qwa6k8uq::::res://house.tscn<>res://CharacterBody3D.gd<>uid://cei4apxkvssgn::::res://audio/relaxing background music- 4_7_24, 3.09 PM.mp3<>res://BombsPlacedIndicator.gd<>uid://b2wbqbeyqhn1r::::res://fail_ui.tscn<>res://addons/simplegrasstextured/shaders/grass.gdshader<>uid://c4ggdp0kg5wjk::::res://addons/simplegrasstextured/textures/grassbushcc008.png<>res://addons/simplegrasstextured/grass.gd<>uid://bacont1edgsmh::::res://flower.tscn
+oldBuildingModularBlocksVersion.tscn::PackedScene::2122777490365535729::1712304058::0::1::::<><>::uid://4qxga6s5qw48::::res://block.tscn<>uid://w2yudtiamkxa::::res://glassBlock.tscn<>uid://bdax3o4j8eid5::::res://wood_block.tscn
+particle_sprite_smoke.webp::CompressedTexture2D::216126177982551098::1712831910::1712992656::1::::<><>::
+premise.tscn::PackedScene::4265467339449183626::1712989939::0::1::::<><>::uid://c17xqi648gxeu::::res://Screenshot 2024-04-11 at 6.46.26 PM.png<>uid://bwvk4hcnr3sbt::::res://Screenshot 2024-04-11 at 7.50.19 PM.png<>uid://dbscbgmlnjokm::::res://audio/click2.ogg
+README.md::TextFile::-1::1711857582::0::1::::<><>::
+Screenshot 2024-04-11 at 6.16.56 PM.png::CompressedTexture2D::8642697073279269894::1712989355::1712992656::1::::<><>::
+Screenshot 2024-04-11 at 6.46.26 PM.png::CompressedTexture2D::6665236923078790936::1712989355::1712992656::1::::<><>::
+Screenshot 2024-04-11 at 7.50.19 PM.png::CompressedTexture2D::3974586505883534861::1712989355::1712992656::1::::<><>::
+Screenshot 2024-04-11 at 8.07.29 PM.png::CompressedTexture2D::4132380256651225566::1712989355::1712992656::1::::<><>::
+smoke_04.png::CompressedTexture2D::8602569718230488268::1712831910::1712992656::1::::<><>::
+win_screen.gd::GDScript::-1::1712989355::0::1::::<>Control<>::
+win_screen.tscn::PackedScene::2017834162895193892::1712989939::0::1::::<><>::res://win_screen.gd<>uid://c17xqi648gxeu::::res://Screenshot 2024-04-11 at 6.46.26 PM.png<>uid://bwvk4hcnr3sbt::::res://Screenshot 2024-04-11 at 7.50.19 PM.png<>uid://dbscbgmlnjokm::::res://audio/click2.ogg
+wood_block.tscn::PackedScene::2598434488249578548::1712304058::0::1::::<><>::
+::res://addons/::1712989355
+::res://addons/simplegrasstextured/::1712989355
+about.gd::GDScript::-1::1712989355::0::1::::<>AcceptDialog<>::
+about.tscn::PackedScene::4911781892099929477::1712989355::0::1::::<><>::res://addons/simplegrasstextured/about.gd<>uid://cl74usvfymgvs::::res://addons/simplegrasstextured/materials/icon.material<>uid://cubr1a55brlfp::::res://addons/simplegrasstextured/sgt_icon_48.svg
+clear_all_confirmation_dialog.gd::GDScript::-1::1712989355::0::1::::<>ConfirmationDialog<>::
+clear_all_confirmation_dialog.tscn::PackedScene::6655298708346297599::1712989355::0::1::::<><>::res://addons/simplegrasstextured/clear_all_confirmation_dialog.gd
+global_parameters.gd::GDScript::-1::1712989355::0::1::::<>AcceptDialog<>::
+global_parameters.tscn::PackedScene::2458798723417736340::1712989355::0::1::::<><>::res://addons/simplegrasstextured/global_parameters.gd
+grass.gd::GDScript::-1::1712989355::0::1::::<>MultiMeshInstance3D<>::
+icon.svg::CompressedTexture2D::3674741696772618351::1712989355::1712992656::1::::<><>::
+plugin.cfg::TextFile::-1::1712989355::0::1::::<><>::
+plugin.gd::GDScript::-1::1712989355::0::1::::<>EditorPlugin<>::
+sgt_icon.svg::CompressedTexture2D::3674741696772618351::1712989355::1712992656::1::::<><>::
+sgt_icon_48.svg::CompressedTexture2D::6179761285128679357::1712989355::1712992656::1::::<><>::
+sgt_inspector.gd::GDScript::-1::1712989355::0::1::::<>EditorInspectorPlugin<>::
+singleton.gd::GDScript::-1::1712989355::0::1::::<>Node3D<>::
+singleton.tscn::PackedScene::2771945727575370787::1712989355::0::1::::<><>::res://addons/simplegrasstextured/singleton.gd<>res://addons/simplegrasstextured/shaders/distance.gdshader<>res://addons/simplegrasstextured/shaders/motion1.gdshader<>res://addons/simplegrasstextured/shaders/motion2.gdshader<>res://addons/simplegrasstextured/shaders/normal.gdshader<>uid://cho4etu1eahnx::::res://addons/simplegrasstextured/images/normal.png<>uid://m77dlrqfdeef::::res://addons/simplegrasstextured/images/normal_frame.png<>res://addons/simplegrasstextured/shaders/blur1.gdshader<>res://addons/simplegrasstextured/shaders/blur2.gdshader<>uid://bovwvrkiruiat::::res://addons/simplegrasstextured/images/motion_frame.png<>uid://dk6rqq2wmb45o::::res://addons/simplegrasstextured/images/motion.png
+toolbar.gd::GDScript::-1::1712989355::0::1::::<>Control<>::
+toolbar.tscn::PackedScene::8439958543240164824::1712989355::0::1::::<><>::res://addons/simplegrasstextured/toolbar.gd<>uid://cl74usvfymgvs::::res://addons/simplegrasstextured/materials/icon.material<>uid://bsmcpupaj02v8::::res://addons/simplegrasstextured/sgt_icon.svg<>uid://der2mmxtog2mt::::res://addons/simplegrasstextured/toolbar_menu.tscn<>uid://clm6vd2es8xm7::::res://addons/simplegrasstextured/images/sgt_icon_radius.svg<>uid://tqiak77omdnr::::res://addons/simplegrasstextured/images/sgt_icon_density.svg<>uid://d28dlfkm62t6e::::res://addons/simplegrasstextured/images/sgt_icon_distance.svg
+toolbar_menu.gd::GDScript::-1::1712989355::0::1::::<>MenuButton<>::
+toolbar_menu.tscn::PackedScene::7476773302474954695::1712989355::0::1::::<><>::res://addons/simplegrasstextured/toolbar_menu.gd
+toolbar_up.gd::GDScript::-1::1712989355::0::1::::<>Control<>::
+toolbar_up.tscn::PackedScene::2788704064382556614::1712989355::0::1::::<><>::res://addons/simplegrasstextured/toolbar_up.gd<>uid://bsmcpupaj02v8::::res://addons/simplegrasstextured/sgt_icon.svg<>uid://der2mmxtog2mt::::res://addons/simplegrasstextured/toolbar_menu.tscn
+::res://addons/simplegrasstextured/images/::1712989355
+icon_density.svg::CompressedTexture2D::1367104385270064023::1712989355::1712992656::1::::<><>::
+icon_distance.svg::CompressedTexture2D::9122687368553934006::1712989355::1712992656::1::::<><>::
+icon_radius.svg::CompressedTexture2D::5571611108387928316::1712989355::1712992656::1::::<><>::
+motion.png::CompressedTexture2D::7926207842513999046::1712989355::1712992656::1::::<><>::
+motion_frame.png::CompressedTexture2D::3413790611705667811::1712989355::1712992656::1::::<><>::
+normal.png::CompressedTexture2D::5294833527401528685::1712989355::1712992656::1::::<><>::
+normal_frame.png::CompressedTexture2D::910275117688840773::1712989355::1712992656::1::::<><>::
+pointer.png::CompressedTexture2D::2028199532254930808::1712989355::1712992656::1::::<><>::
+sgt_icon_density.svg::CompressedTexture2D::1367104385270064023::1712989355::1712992656::1::::<><>::
+sgt_icon_distance.svg::CompressedTexture2D::9122687368553934006::1712989355::1712992656::1::::<><>::
+sgt_icon_radius.svg::CompressedTexture2D::5571611108387928316::1712989355::1712992656::1::::<><>::
+wind_pattern.png::CompressedTexture2D::18393553257205938::1712989355::1712992656::1::::<><>::
+::res://addons/simplegrasstextured/materials/::1712989355
+grass.material::ShaderMaterial::8222375467503170076::1712989355::0::1::::<><>::res://addons/simplegrasstextured/shaders/grass.gdshader
+grass_unshaded.material::ShaderMaterial::3094928426551161515::1712989355::0::1::::<><>::res://addons/simplegrasstextured/shaders/grass_unshaded.gdshader
+icon.material::ShaderMaterial::5612776222323720372::1712989355::0::1::::<><>::
+position.material::ShaderMaterial::4894212141296346752::1712989355::0::1::::<><>::res://addons/simplegrasstextured/shaders/position.gdshader
+::res://addons/simplegrasstextured/shaders/::1712989355
+blur1.gdshader::Shader::-1::1712989355::0::1::::<><>::
+blur2.gdshader::Shader::-1::1712989355::0::1::::<><>::
+distance.gdshader::Shader::-1::1712989355::0::1::::<><>::
+grass.gdshader::Shader::-1::1712989355::0::1::::<><>::
+grass_unshaded.gdshader::Shader::-1::1712989355::0::1::::<><>::
+motion1.gdshader::Shader::-1::1712989355::0::1::::<><>::
+motion2.gdshader::Shader::-1::1712989355::0::1::::<><>::
+normal.gdshader::Shader::-1::1712989355::0::1::::<><>::
+position.gdshader::Shader::-1::1712989355::0::1::::<><>::
+::res://addons/simplegrasstextured/textures/::1712989355
+grassbushcc008.png::CompressedTexture2D::6821074585685753060::1712989355::1712992656::1::::<><>::
+::res://audio/::1712831910
+click2.ogg::AudioStreamOggVorbis::7266733248265135504::1712831910::1712992656::1::::<><>::
+explosion sound - 4_7_24, 2.12 PM.mp3::AudioStreamMP3::5974717510338184445::1712831910::1712992656::1::::<><>::
+impactGlass_medium_002.ogg::AudioStreamOggVorbis::319616800331243673::1712831910::1712992656::1::::<><>::
+impactWood_heavy_003.ogg::AudioStreamOggVorbis::7696118780247127609::1712831910::1712992656::1::::<><>::
+relaxing background music- 4_7_24, 3.09 PM.mp3::AudioStreamMP3::5071873380624936833::1712831910::1712992656::1::::<><>::
+::res://joltPhysics/::1712304058
+::res://joltPhysics/addons/::1712304058
+::res://joltPhysics/addons/godot-jolt/::1712304058
+godot-jolt.gdextension::GDExtension::-1::1712304058::0::1::::<><>::
+LICENSE.txt::TextFile::-1::1712304058::0::1::::<><>::
+THIRDPARTY.txt::TextFile::-1::1712304058::0::1::::<><>::
+::res://joltPhysics/addons/godot-jolt/android/::1712304058
+::res://joltPhysics/addons/godot-jolt/ios/::1712304058
+::res://joltPhysics/addons/godot-jolt/ios/godot-jolt_ios.framework/::1712304058
+::res://joltPhysics/addons/godot-jolt/ios/godot-jolt_ios_editor.framework/::1712304058
+::res://joltPhysics/addons/godot-jolt/linux/::1712304058
+::res://joltPhysics/addons/godot-jolt/macos/::1712304058
+::res://joltPhysics/addons/godot-jolt/macos/godot-jolt_macos.framework/::1712304058
+::res://joltPhysics/addons/godot-jolt/macos/godot-jolt_macos.framework/Resources/::1712304058
+::res://joltPhysics/addons/godot-jolt/macos/godot-jolt_macos.framework/_CodeSignature/::1712304058
+::res://joltPhysics/addons/godot-jolt/macos/godot-jolt_macos_editor.framework/::1712304058
+::res://joltPhysics/addons/godot-jolt/macos/godot-jolt_macos_editor.framework/Resources/::1712304058
+::res://joltPhysics/addons/godot-jolt/macos/godot-jolt_macos_editor.framework/_CodeSignature/::1712304058
+::res://joltPhysics/addons/godot-jolt/windows/::1712304058
