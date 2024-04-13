@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cregyvq5gos2p"
+path="res://.godot/imported/explosion sound - 4_7_24, 2.12 PM.mp3-db171bca598b4980ae6d4b9987689077.mp3str"
+
+[deps]
+
+source_file="res://source/audio/explosion sound - 4_7_24, 2.12 PM.mp3"
+dest_files=["res://.godot/imported/explosion sound - 4_7_24, 2.12 PM.mp3-db171bca598b4980ae6d4b9987689077.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
