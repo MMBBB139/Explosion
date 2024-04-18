@@ -1,8 +1,7 @@
-res://win_screen.tscn
-res://win_screen.gd
-res://block.tscn
 res://bomb.tscn
+res://block.tscn
 res://house.tscn
+res://win_screen.tscn
 res://dead_screen.tscn
 res://premise.tscn
 res://main.tscn

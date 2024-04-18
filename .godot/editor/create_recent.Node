@@ -1,9 +1,10 @@
+DirectionalLight3D
+Camera3D
 ColorRect
 AnimationPlayer
 Timer
 Node
 Control
-DirectionalLight3D
 Node3D
 SimpleGrassTextured
 CollisionShape3D
@@ -11,4 +12,3 @@ StaticBody3D
 Label
 Sprite3D
 AudioStreamPlayer
-Button
