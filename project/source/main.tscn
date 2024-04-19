@@ -57,7 +57,7 @@ backlight = Color(1, 0.129412, 0.117647, 0.243137)
 [sub_resource type="BoxShape3D" id="BoxShape3D_cbq04"]
 size = Vector3(17, 10, 20)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_stnsn"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wjert"]
 resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("7_tv0ue")
@@ -92,7 +92,7 @@ _surfaces = [{
 "format": 34359742495,
 "index_count": 12,
 "index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 3, 0, 1, 0, 0, 0, 4, 0, 5, 0, 6, 0, 7, 0, 5, 0, 4, 0),
-"material": SubResource("ShaderMaterial_stnsn"),
+"material": SubResource("ShaderMaterial_wjert"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
@@ -108,7 +108,7 @@ buffer = PackedFloat32Array(-0.916878, 0, -0.399167, 9.31635, 0, 1, 0, -0.110828
 [sub_resource type="BoxShape3D" id="BoxShape3D_k78v6"]
 size = Vector3(10, 0.01, 14)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_plicn"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_touh0"]
 resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("7_tv0ue")
@@ -143,7 +143,7 @@ _surfaces = [{
 "format": 34359742495,
 "index_count": 12,
 "index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 3, 0, 1, 0, 0, 0, 4, 0, 5, 0, 6, 0, 7, 0, 5, 0, 4, 0),
-"material": SubResource("ShaderMaterial_plicn"),
+"material": SubResource("ShaderMaterial_touh0"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
@@ -310,5 +310,7 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -1.22749, 0.794594, -4.87429)
 
 [node name="flower4" parent="FlowerCollection" instance=ExtResource("10_yp6v1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.64165, 1.3517, 3.83237)
+
+[node name="CD" type="Timer" parent="."]
 
 [connection signal="finished" from="AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]

@@ -5,9 +5,13 @@ const RAY_LENGTH = 69
 var bomb
 var bombs = []
 var bombsplaced = 0
-
+var is_ready = true
+@onready var cooldown_timer = $CD
 signal bomb_placed
 
+func _on_cooldown_timer_timeout():
+	is_ready = true 
+	
 func _ready():
 	pass
 
@@ -32,11 +36,13 @@ func _physics_process(delta):
 			print(result["position"])
 			bomb.set_position(result["position"]+Vector3(0,5,0))
 			print(bomb.global_position)
-		if Input.is_action_pressed("actuallyplacebomb"):
+		if Input.is_action_pressed("actuallyplacebomb") and is_ready:
 			bomb.fix()
 			bomb = null
 			print(!bomb)
 			bombsplaced += 1
+			is_ready = false
+			cooldown_timer.start()
 			$"BombsPlacedIndicator/Label".text = str("Bombs Placed: ") + str(bombsplaced)
 	
 
