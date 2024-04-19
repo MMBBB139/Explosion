@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://c0tkv43s88ehi"]
+[gd_scene load_steps=12 format=3 uid="uid://c0tkv43s88ehi"]
 
+[ext_resource type="Script" path="res://source/bomb.gd" id="1_g21xy"]
 [ext_resource type="Texture2D" uid="uid://dcxti7wq0xkc" path="res://source/particle_sprite_smoke.webp" id="1_vs2vt"]
 [ext_resource type="AudioStream" uid="uid://cregyvq5gos2p" path="res://source/audio/explosion sound - 4_7_24, 2.12 PM.mp3" id="2_pckmg"]
 [ext_resource type="AudioStream" uid="uid://es3bos7uqbn2" path="res://source/audio/impactGlass_medium_002.ogg" id="3_hwfcp"]
@@ -52,6 +53,8 @@ particles_anim_loop = false
 material = SubResource("StandardMaterial3D_e5y73")
 
 [node name="bomb" type="Node3D"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+script = ExtResource("1_g21xy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -78,4 +81,5 @@ stream = ExtResource("3_hwfcp")
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.22541, 0.205341, 0.240281)
 billboard = 1
+texture_filter = 0
 texture = ExtResource("4_6uhcm")
