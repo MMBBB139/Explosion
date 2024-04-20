@@ -3,12 +3,18 @@ extends CharacterBody3D
 const SPEED = 5.0
 const GRAVITY = 0  
 
-@export var sensitivity = 3000
+@export var sensitivity = 500
 
+var mouse_held = false
 var is_grounded = false
 var fly_direction = Vector3.ZERO
 
 func _physics_process(delta):
+	if Input.is_action_pressed("lmb"):
+		mouse_held = true
+	else:
+		mouse_held = false
+	
 	fly_direction = Vector3.ZERO
 	if Input.is_action_pressed("Up"):
 		fly_direction.y = 1
@@ -30,7 +36,8 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _input(event):
-	if event is InputEventMouseMotion:
-		rotation.y -= event.relative.x/(sensitivity/2)
-		$Camera.rotation.x -= event.relative.y/sensitivity
-		$Camera.rotation.x = clamp($Camera.rotation.x, deg_to_rad(0), deg_to_rad(90)) 
+	if mouse_held:
+		if event is InputEventMouseMotion:
+			rotation.y -= event.relative.x/sensitivity
+			$Camera.rotation.x += event.relative.y/sensitivity
+			$Camera.rotation.x = clamp($Camera.rotation.x, deg_to_rad(0), deg_to_rad(90)) 

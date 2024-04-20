@@ -1,1 +1,6 @@
 res://source/main.tscn
+res://source/main.gd
+res://source/flower.tscn
+res://source/dead_screen.tscn
+res://source/bomb.tscn
+res://source/block.tscn
