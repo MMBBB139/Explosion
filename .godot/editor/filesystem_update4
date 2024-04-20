@@ -1,1 +1,11 @@
+res://bomb.tscn
+res://block.tscn
+res://house.tscn
+res://win_screen.tscn
+res://dead_screen.tscn
+res://premise.tscn
 res://main.tscn
+res://instructions.tscn
+res://fail_ui.tscn
+res://flower.tscn
+res://addons/simplegrasstextured/about.tscn

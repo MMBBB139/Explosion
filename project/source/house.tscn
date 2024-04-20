@@ -10,6 +10,7 @@ size = Vector3(10, 0.5, 15)
 size = Vector3(10, 0.5, 15)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ndrbm"]
+transparency = 1
 albedo_color = Color(0.121569, 0.0980392, 0.0823529, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1ox0j"]
@@ -20,7 +21,8 @@ size = Vector3(3, 0.5, 4.5)
 size = Vector3(3, 0.5, 4.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gxlv1"]
-albedo_color = Color(0.312389, 0.175839, 9.62615e-08, 1)
+transparency = 1
+albedo_color = Color(0.313726, 0.176471, 0, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_fvkjo"]
 size = Vector3(3, 0.5, 4)
