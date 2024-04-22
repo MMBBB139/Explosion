@@ -1,24 +1,26 @@
-[gd_scene load_steps=12 format=3 uid="uid://c0tkv43s88ehi"]
+[gd_scene load_steps=15 format=3 uid="uid://c0tkv43s88ehi"]
 
 [ext_resource type="Script" path="res://bomb.gd" id="1_pb20d"]
 [ext_resource type="Texture2D" uid="uid://dcxti7wq0xkc" path="res://particle_sprite_smoke.webp" id="1_vs2vt"]
 [ext_resource type="AudioStream" uid="uid://cregyvq5gos2p" path="res://audio/explosion sound - 4_7_24, 2.12 PM.mp3" id="2_pckmg"]
 [ext_resource type="AudioStream" uid="uid://es3bos7uqbn2" path="res://audio/impactGlass_medium_002.ogg" id="3_hwfcp"]
 [ext_resource type="Texture2D" uid="uid://dvet7tsq5ivic" path="res://Screenshot 2024-04-11 at 6.16.56 PM.png" id="4_6uhcm"]
+[ext_resource type="ArrayMesh" uid="uid://d0lw6vx414c4p" path="res://Bomb.obj" id="6_q7b2o"]
+[ext_resource type="Texture2D" uid="uid://dwtj2vu484l25" path="res://BombAlbedo.png" id="7_jrwde"]
 
 [sub_resource type="Animation" id="Animation_col64"]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite3D:scale")
+tracks/0/path = NodePath("Bomb:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0.4, 0.4, 0.4)]
+"values": [Vector3(0.2, 0.2, 0.2)]
 }
 
 [sub_resource type="Animation" id="Animation_dv8jm"]
@@ -26,14 +28,14 @@ resource_name = "explode"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite3D:scale")
+tracks/0/path = NodePath("Bomb:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0.4, 0.4, 0.4), Vector3(0.47, 0.47, 0.47), Vector3(0, 0, 0)]
+"values": [Vector3(0.2, 0.2, 0.2), Vector3(0.25, 0.25, 0.25), Vector3(0, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bkved"]
@@ -64,6 +66,9 @@ particles_anim_loop = false
 [sub_resource type="QuadMesh" id="QuadMesh_canjy"]
 material = SubResource("StandardMaterial3D_e5y73")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ua57b"]
+albedo_texture = ExtResource("7_jrwde")
+
 [node name="bomb" type="Node3D"]
 script = ExtResource("1_pb20d")
 
@@ -91,8 +96,14 @@ stream = ExtResource("3_hwfcp")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.22541, 0.205341, 0.240281)
+visible = false
 billboard = 1
 texture = ExtResource("4_6uhcm")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.0251127, 0.999685, 0, -0.999685, 0.0251127, 0, 2.30241, 0)
+
+[node name="Bomb" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = ExtResource("6_q7b2o")
+surface_material_override/0 = SubResource("StandardMaterial3D_ua57b")
