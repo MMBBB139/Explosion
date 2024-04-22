@@ -1,14 +1,3 @@
 res://source/main.tscn
-res://source/main.gd
-res://source/flower.tscn
-res://source/dead_screen.tscn
-res://source/bomb.tscn
-res://source/block.tscn
-res://source/House.gd
-res://source/house.tscn
-res://source/CharacterBody3D.gd
-res://source/bomb.gd
-res://source/AudioStreamPlayer3D.gd
-res://source/BombsPlacedIndicator.gd
-res://source/global.gd
-res://source/win_screen.gd
+res://source/premise.tscn
+res://source/win_screen.tscn
