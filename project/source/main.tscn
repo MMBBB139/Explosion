@@ -255,7 +255,7 @@ backlight = Color(1, 0.129412, 0.117647, 0.243137)
 [sub_resource type="BoxShape3D" id="BoxShape3D_cbq04"]
 size = Vector3(17, 10, 20)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2cgiu"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2hhje"]
 resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("7_tv0ue")
@@ -290,7 +290,7 @@ _surfaces = [{
 "format": 34359742495,
 "index_count": 12,
 "index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 3, 0, 1, 0, 0, 0, 4, 0, 5, 0, 6, 0, 7, 0, 5, 0, 4, 0),
-"material": SubResource("ShaderMaterial_2cgiu"),
+"material": SubResource("ShaderMaterial_2hhje"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
@@ -306,7 +306,7 @@ buffer = PackedFloat32Array(-0.916878, 0, -0.399167, 9.31635, 0, 1, 0, -0.110828
 [sub_resource type="BoxShape3D" id="BoxShape3D_k78v6"]
 size = Vector3(10, 0.01, 14)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_55d48"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m86eu"]
 resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("7_tv0ue")
@@ -341,7 +341,7 @@ _surfaces = [{
 "format": 34359742495,
 "index_count": 12,
 "index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 3, 0, 1, 0, 0, 0, 4, 0, 5, 0, 6, 0, 7, 0, 5, 0, 4, 0),
-"material": SubResource("ShaderMaterial_55d48"),
+"material": SubResource("ShaderMaterial_m86eu"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,

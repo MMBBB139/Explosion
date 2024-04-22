@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://bryemj3nhtfid"]
 
-[ext_resource type="AudioStream" uid="uid://dbscbgmlnjokm" path="res://audio/click2.ogg" id="1_00gye"]
-[ext_resource type="Texture2D" uid="uid://c17xqi648gxeu" path="res://Screenshot 2024-04-11 at 6.46.26 PM.png" id="1_54im7"]
-[ext_resource type="Script" path="res://instructions.gd" id="1_qe1bg"]
-[ext_resource type="Texture2D" uid="uid://bwvk4hcnr3sbt" path="res://Screenshot 2024-04-11 at 7.50.19 PM.png" id="2_72caj"]
+[ext_resource type="AudioStream" uid="uid://dbscbgmlnjokm" path="res://source/audio/click2.ogg" id="1_00gye"]
+[ext_resource type="Texture2D" uid="uid://c17xqi648gxeu" path="res://source/Screenshot 2024-04-11 at 6.46.26 PM.png" id="1_54im7"]
+[ext_resource type="Script" path="res://source/instructions.gd" id="1_qe1bg"]
+[ext_resource type="Texture2D" uid="uid://bwvk4hcnr3sbt" path="res://source/Screenshot 2024-04-11 at 7.50.19 PM.png" id="2_72caj"]
 
 [sub_resource type="Animation" id="Animation_12til"]
 length = 0.5

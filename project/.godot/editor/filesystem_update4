@@ -1,3 +1,6 @@
 res://source/main.tscn
 res://source/premise.tscn
 res://source/win_screen.tscn
+res://source/instructions.tscn
+res://source/instructions.gd
+res://premise.gd
