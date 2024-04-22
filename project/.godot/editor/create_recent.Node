@@ -1,1 +1,6 @@
+Area3D
+CollisionShape3D
+Node3D
+RigidBody3D
+MeshInstance3D
 Timer
