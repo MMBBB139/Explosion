@@ -1,7 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713812393
+::res://::1713813354
 export_presets.cfg::TextFile::-1::1713812060::0::1::::<><>::
-main.tscn::PackedScene::8876558692505414715::1713812470::0::1::::<><>::res://source/main.gd<>uid://7jb8qwa6k8uq::::res://source/house.tscn<>res://source/CharacterBody3D.gd<>uid://cei4apxkvssgn::::res://source/audio/relaxing background music- 4_7_24, 3.09 PM.mp3<>res://source/BombsPlacedIndicator.gd<>uid://b2wbqbeyqhn1r::::res://source/fail_ui.tscn<>res://addons/simplegrasstextured/shaders/grass.gdshader<>uid://c4ggdp0kg5wjk::::res://addons/simplegrasstextured/textures/grassbushcc008.png<>res://addons/simplegrasstextured/grass.gd<>uid://bacont1edgsmh::::res://source/flower.tscn
 premise.gd::GDScript::-1::1713812060::0::1::::<>Control<>::
 ::res://addons/::1713812155
 ::res://addons/simplegrasstextured/::1713812155
@@ -76,28 +75,31 @@ THIRDPARTY.txt::TextFile::-1::1713812060::0::1::::<><>::
 ::res://joltPhysics/addons/godot-jolt/macos/godot-jolt_macos_editor.framework/Resources/::1713812060
 ::res://joltPhysics/addons/godot-jolt/macos/godot-jolt_macos_editor.framework/_CodeSignature/::1713812060
 ::res://joltPhysics/addons/godot-jolt/windows/::1713812155
-::res://source/::1713812375
+::res://source/::1713813368
 AudioStreamPlayer3D.gd::GDScript::-1::1713812060::0::1::::<>AudioStreamPlayer3D<>::
 block.tscn::PackedScene::2069913763912473523::1713812061::0::1::::<><>::
 bomb.gd::GDScript::-1::1713812061::0::1::::<>Node3D<>::
-bomb.tscn::PackedScene::6567431874558731358::1713812061::0::1::::<><>::res://source/bomb.gd<>uid://dcxti7wq0xkc::::res://source/particle_sprite_smoke.webp<>uid://cregyvq5gos2p::::res://source/audio/explosion sound - 4_7_24, 2.12 PM.mp3<>uid://es3bos7uqbn2::::res://source/audio/impactGlass_medium_002.ogg
+Bomb.obj::Mesh::6295556079329986046::1713813322::1713813347::1::::<><>::
+bomb.tscn::PackedScene::6567431874558731358::1713813093::0::1::::<><>::res://source/bomb.gd<>uid://dcxti7wq0xkc::::res://source/particle_sprite_smoke.webp<>uid://cregyvq5gos2p::::res://source/audio/explosion sound - 4_7_24, 2.12 PM.mp3<>uid://es3bos7uqbn2::::res://source/audio/impactGlass_medium_002.ogg
+BombAlbedo.png::CompressedTexture2D::8384974598445652966::1713813368::1713813439::1::::<><>::
 BombsPlacedIndicator.gd::GDScript::-1::1713812060::0::1::::<>Control<>::
 CharacterBody3D.gd::GDScript::-1::1713812060::0::1::::<>CharacterBody3D<>::
 dead_screen.tscn::PackedScene::8434380181851706729::1713812061::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1713812061::0::1::::<><>::
 fail_ui.tscn::PackedScene::4327025122019225713::1713812061::0::1::::<><>::uid://c17xqi648gxeu::::res://source/Screenshot 2024-04-11 at 6.46.26 PM.png<>uid://dbscbgmlnjokm::::res://source/audio/click2.ogg
 flower.obj::Mesh::1091806103361648756::1713812061::1713812061::1::::<><>::
-flower.tscn::PackedScene::2391423730715290055::1713812204::0::1::::<><>::uid://ps45fm7b1o4c::::res://source/flower.obj
+flower.tscn::PackedScene::2391423730715290055::1713812901::0::1::::<><>::uid://ps45fm7b1o4c::::res://source/flower.obj
 glassBlock.tscn::PackedScene::1601385870386121174::1713812061::0::1::::<><>::
 global.gd::GDScript::-1::1713812061::0::1::::<>Node<>::
 house.tscn::PackedScene::2264742918796360060::1713812061::0::1::::<><>::uid://dhwb7mnh0lkeb::::res://source/audio/impactWood_heavy_003.ogg
 icon.svg::CompressedTexture2D::7480593740069699196::1713812061::1713812061::1::::<><>::
-instructions.gd::GDScript::-1::1713812061::0::1::::<>Control<>::
-instructions.tscn::PackedScene::3629440905700453455::1713812204::0::1::::<><>::uid://dbscbgmlnjokm::::res://source/audio/click2.ogg<>uid://c17xqi648gxeu::::res://source/Screenshot 2024-04-11 at 6.46.26 PM.png<>res://source/instructions.gd<>uid://bwvk4hcnr3sbt::::res://source/Screenshot 2024-04-11 at 7.50.19 PM.png
-main.gd::GDScript::-1::1713812061::0::1::::<>Node3D<>::
+instructions.gd::GDScript::-1::1713812586::0::1::::<>Control<>::
+instructions.tscn::PackedScene::3629440905700453455::1713812901::0::1::::<><>::uid://dbscbgmlnjokm::::res://source/audio/click2.ogg<>uid://c17xqi648gxeu::::res://source/Screenshot 2024-04-11 at 6.46.26 PM.png<>res://source/instructions.gd<>uid://bwvk4hcnr3sbt::::res://source/Screenshot 2024-04-11 at 7.50.19 PM.png
+main.gd::GDScript::-1::1713812901::0::1::::<>Node3D<>::
+main.tscn::PackedScene::8876558692505414715::1713812901::0::1::::<><>::res://source/main.gd<>res://source/CharacterBody3D.gd<>uid://7jb8qwa6k8uq::::res://source/house.tscn<>uid://cei4apxkvssgn::::res://source/audio/relaxing background music- 4_7_24, 3.09 PM.mp3<>res://source/BombsPlacedIndicator.gd<>uid://b2wbqbeyqhn1r::::res://source/fail_ui.tscn<>res://addons/simplegrasstextured/shaders/grass.gdshader<>uid://c4ggdp0kg5wjk::::res://addons/simplegrasstextured/textures/grassbushcc008.png<>res://addons/simplegrasstextured/grass.gd<>uid://bacont1edgsmh::::res://source/flower.tscn
 oldBuildingModularBlocksVersion.tscn::PackedScene::2122777490365535729::1713812061::0::1::::<><>::uid://4qxga6s5qw48::::res://source/block.tscn<>uid://w2yudtiamkxa::::res://source/glassBlock.tscn<>uid://bdax3o4j8eid5::::res://source/wood_block.tscn
 particle_sprite_smoke.webp::CompressedTexture2D::216126177982551098::1713812061::1713812061::1::::<><>::
-premise.tscn::PackedScene::4265467339449183626::1713812204::0::1::::<><>::uid://c17xqi648gxeu::::res://source/Screenshot 2024-04-11 at 6.46.26 PM.png<>res://premise.gd<>uid://bwvk4hcnr3sbt::::res://source/Screenshot 2024-04-11 at 7.50.19 PM.png<>uid://dbscbgmlnjokm::::res://source/audio/click2.ogg
+premise.tscn::PackedScene::4265467339449183626::1713812901::0::1::::<><>::uid://c17xqi648gxeu::::res://source/Screenshot 2024-04-11 at 6.46.26 PM.png<>res://premise.gd<>uid://bwvk4hcnr3sbt::::res://source/Screenshot 2024-04-11 at 7.50.19 PM.png<>uid://dbscbgmlnjokm::::res://source/audio/click2.ogg
 README.md::TextFile::-1::1713812060::0::1::::<><>::
 Screenshot 2024-04-11 at 6.16.56 PM.png::CompressedTexture2D::8642697073279269894::1713812060::1713812060::1::::<><>::
 Screenshot 2024-04-11 at 6.46.26 PM.png::CompressedTexture2D::6665236923078790936::1713812060::1713812060::1::::<><>::
@@ -105,7 +107,7 @@ Screenshot 2024-04-11 at 7.50.19 PM.png::CompressedTexture2D::3974586505883534
 Screenshot 2024-04-11 at 8.07.29 PM.png::CompressedTexture2D::4132380256651225566::1713812060::1713812060::1::::<><>::
 smoke_04.png::CompressedTexture2D::8602569718230488268::1713812061::1713812061::1::::<><>::
 win_screen.gd::GDScript::-1::1713812061::0::1::::<>Control<>::
-win_screen.tscn::PackedScene::2017834162895193892::1713812204::0::1::::<><>::res://source/win_screen.gd<>uid://c17xqi648gxeu::::res://source/Screenshot 2024-04-11 at 6.46.26 PM.png<>uid://bwvk4hcnr3sbt::::res://source/Screenshot 2024-04-11 at 7.50.19 PM.png<>uid://dbscbgmlnjokm::::res://source/audio/click2.ogg
+win_screen.tscn::PackedScene::2017834162895193892::1713812901::0::1::::<><>::res://source/win_screen.gd<>uid://c17xqi648gxeu::::res://source/Screenshot 2024-04-11 at 6.46.26 PM.png<>uid://bwvk4hcnr3sbt::::res://source/Screenshot 2024-04-11 at 7.50.19 PM.png<>uid://dbscbgmlnjokm::::res://source/audio/click2.ogg
 wood_block.tscn::PackedScene::2598434488249578548::1713812061::0::1::::<><>::
 ::res://source/audio/::1713812155
 click2.ogg::AudioStreamOggVorbis::7266733248265135504::1713812060::1713812060::1::::<><>::
