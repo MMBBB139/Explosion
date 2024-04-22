@@ -1,7 +1,7 @@
 extends Node3D
 
 const RAY_LENGTH = 1000
-@export var bomb_scene: PackedScene
+var bomb_scene = preload("res://source/bomb.tscn")
 var bomb
 var bombs = []
 var bombsplaced = 0

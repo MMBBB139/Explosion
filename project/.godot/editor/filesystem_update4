@@ -1,2 +1,8 @@
 res://source/bomb.tscn
 res://source/bomb.gd
+res://source/main.tscn
+res://source/main.gd
+res://source/premise.tscn
+res://source/win_screen.tscn
+res://source/instructions.tscn
+res://source/flower.tscn

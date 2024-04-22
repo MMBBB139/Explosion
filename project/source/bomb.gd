@@ -23,7 +23,7 @@ func explosion():
 	var force_dir : Vector3
 	var random_vector : Vector3
 	#Applying the explosion force for every Rigidbody in the array.
-	await get_tree().create_timer(5).timeout
+	await get_tree().create_timer(3).timeout
 	$smoke.emitting = true
 	$AnimationPlayer.play("explode")
 	$explode.play()
