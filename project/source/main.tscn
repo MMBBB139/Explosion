@@ -906,21 +906,21 @@ transform = Transform3D(0.87302, -0.167459, 0.458032, -0.338372, -0.884342, 0.32
 visible = false
 light_energy = 0.5
 
-[node name="Node3D" type="Node3D" parent="."]
+[node name="Win" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.18457, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Win"]
 transform = Transform3D(1, 0, 0, 0, 0.999765, -0.0216751, 0, 0.0216751, 0.999765, 0, 0, 0)
 mesh = SubResource("QuadMesh_2lcm0")
 surface_material_override/0 = SubResource("StandardMaterial3D_a68ji")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Win"]
 mesh = SubResource("QuadMesh_2l0qj")
 surface_material_override/0 = SubResource("StandardMaterial3D_ao6av")
 
-[node name="Area3D" type="Area3D" parent="Node3D"]
+[node name="Area3D" type="Area3D" parent="Win"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Win/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 shape = SubResource("BoxShape3D_cbq04")
 

@@ -23,13 +23,15 @@ func explosion():
 	var force_dir : Vector3
 	var random_vector : Vector3
 	#Applying the explosion force for every Rigidbody in the array.
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(3).timeout
 	for j in items_in_radius:
 		#Getting a direction vector between the bomb and all nearby RigidBodies. This line of code later helps to calculate a trajectory for the Rigidbodies.
 		force_dir = self.position.direction_to(j.position)
 		#Generating a position on the object where the force will be applied. This line of code makes the Rigidbodies randomly rotate after the explosion.
 		random_vector = Vector3(randf_range(0, 1), randf_range(0, 1), randf_range(0, 1)) * force_dir
-		j.apply_impulse(random_vector, force_dir * explosion_force)
+		j.apply_impulse(random_vector, force_dir * explosion_force)	
+	queue_free()
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
