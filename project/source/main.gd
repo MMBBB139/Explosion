@@ -56,7 +56,7 @@ func won():
 	#$AnimationPlayer.play("fadeOut")
 
 func switchToWin():
-	get_tree().change_scene_to_file("res://win_screen.tscn")
+	get_tree().change_scene_to_file("res://source/win_screen.tscn")
 
 
 func _on_animation_player_animation_finished(anim_name):

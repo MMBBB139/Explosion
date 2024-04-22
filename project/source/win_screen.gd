@@ -22,4 +22,4 @@ func _on_button_pressed():
 
 func restart():
 	Global.bombsUsed = 0
-	get_tree().change_scene_to_file("res://main.tscn")
+	get_tree().change_scene_to_file("res://source/main.tscn")
