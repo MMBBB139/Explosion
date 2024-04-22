@@ -1,9 +1,10 @@
 extends CharacterBody3D
 
 const SPEED = 5.0
-const GRAVITY = 0  
+const GRAVITY = 9.8  
 
 @export var sensitivity = 500
+@export var explosion_force : int = 30
 
 var mouse_held = false
 var is_grounded = false
