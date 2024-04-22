@@ -1,15 +1,214 @@
-[gd_scene load_steps=30 format=3 uid="uid://dyp4viirq5heh"]
+[gd_scene load_steps=92 format=3 uid="uid://dyp4viirq5heh"]
 
 [ext_resource type="Script" path="res://source/main.gd" id="1_j4vd8"]
-[ext_resource type="PackedScene" uid="uid://7jb8qwa6k8uq" path="res://source/house.tscn" id="1_uo6t7"]
 [ext_resource type="Script" path="res://source/CharacterBody3D.gd" id="2_16uq1"]
+[ext_resource type="PackedScene" uid="uid://c0tkv43s88ehi" path="res://source/bomb.tscn" id="2_qcsk7"]
 [ext_resource type="AudioStream" uid="uid://cei4apxkvssgn" path="res://source/audio/relaxing background music- 4_7_24, 3.09 PM.mp3" id="4_08ra7"]
+[ext_resource type="AudioStream" uid="uid://dhwb7mnh0lkeb" path="res://source/audio/impactWood_heavy_003.ogg" id="4_i6ppy"]
 [ext_resource type="Script" path="res://source/BombsPlacedIndicator.gd" id="5_tjpln"]
 [ext_resource type="PackedScene" uid="uid://b2wbqbeyqhn1r" path="res://source/fail_ui.tscn" id="6_nsgdu"]
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="7_tv0ue"]
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="8_srxl8"]
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="9_nbcpo"]
 [ext_resource type="PackedScene" uid="uid://bacont1edgsmh" path="res://source/flower.tscn" id="10_yp6v1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fpi2m"]
+margin = 0.0
+size = Vector3(10, 0.5, 15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_i3yk8"]
+size = Vector3(10, 0.5, 15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_if1km"]
+albedo_color = Color(0.121569, 0.0980392, 0.0823529, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_70nxu"]
+margin = 0.0
+size = Vector3(9, 4.5, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qhgsx"]
+size = Vector3(9, 4.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v31yu"]
+transparency = 1
+albedo_color = Color(0.623529, 0.815686, 0.988235, 0.27451)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ylugk"]
+margin = 0.0
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6xa8x"]
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ykdnn"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_66ers"]
+size = Vector3(3, 4.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ser48"]
+transparency = 1
+albedo_color = Color(0.623529, 0.815686, 0.988235, 0.27451)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0htum"]
+margin = 0.0
+size = Vector3(3, 4.5, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hgcv6"]
+size = Vector3(0.5, 5.5, 2.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vys7i"]
+size = Vector3(0.5, 5.5, 2.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4o8uc"]
+albedo_color = Color(0.403922, 0.403922, 0.403922, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3s8t0"]
+size = Vector3(11, 0.5, 2.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_renb8"]
+size = Vector3(11, 0.5, 2.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_61g5n"]
+albedo_color = Color(0.403922, 0.403922, 0.403922, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m1fxp"]
+size = Vector3(9, 0.5, 6.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xu4qh"]
+size = Vector3(9, 0.5, 6.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5deqf"]
+albedo_color = Color(0.403922, 0.403922, 0.403922, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bn6by"]
+margin = 0.0
+size = Vector3(0.5, 4.5, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3yt4i"]
+size = Vector3(0.5, 4.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_epkxa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0nhdi"]
+margin = 0.0
+size = Vector3(0.5, 4, 6)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kokuc"]
+size = Vector3(0.5, 4, 6)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kuppi"]
+transparency = 1
+albedo_color = Color(0.623529, 0.815686, 0.988235, 0.27451)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7opda"]
+margin = 0.0
+size = Vector3(0.5, 0.5, 6)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jgxnp"]
+size = Vector3(0.5, 0.5, 6)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e6vl1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s1foj"]
+margin = 0.0
+size = Vector3(0.5, 4.5, 3.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cx5vp"]
+size = Vector3(0.5, 4.5, 3.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r6rek"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r4oer"]
+margin = 0.0
+size = Vector3(3, 0.5, 4.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ryrfu"]
+size = Vector3(3, 0.5, 4.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gvu2a"]
+albedo_color = Color(0.312389, 0.175839, 9.62615e-08, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hcgdn"]
+size = Vector3(3, 0.5, 4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3o8k"]
+albedo_color = Color(0.312389, 0.175839, 9.62615e-08, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b6h0o"]
+margin = 0.0
+size = Vector3(3, 0.5, 4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sfps7"]
+margin = 0.0
+size = Vector3(3, 0.5, 3.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_j3dr5"]
+size = Vector3(3, 0.5, 3.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fpn0y"]
+albedo_color = Color(0.312389, 0.175839, 9.62615e-08, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dq7r0"]
+margin = 0.0
+size = Vector3(3, 0.5, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8jtn2"]
+size = Vector3(3, 0.5, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_74i55"]
+albedo_color = Color(0.312389, 0.175839, 9.62615e-08, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mt2eo"]
+margin = 0.0
+size = Vector3(3, 0.5, 2.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_00l5h"]
+size = Vector3(3, 0.5, 2.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_edl3i"]
+albedo_color = Color(0.312389, 0.175839, 9.62615e-08, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8l76j"]
+margin = 0.0
+size = Vector3(3, 0.5, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0f6l3"]
+size = Vector3(3, 0.5, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ftht2"]
+albedo_color = Color(0.312389, 0.175839, 9.62615e-08, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8od7f"]
+margin = 0.0
+size = Vector3(3, 0.5, 1.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_agutu"]
+size = Vector3(3, 0.5, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7fgy2"]
+albedo_color = Color(0.312389, 0.175839, 9.62615e-08, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_36ck8"]
+margin = 0.0
+size = Vector3(3, 0.5, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cqv21"]
+size = Vector3(3, 0.5, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_756bf"]
+albedo_color = Color(0.312389, 0.175839, 9.62615e-08, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_42tj2"]
+margin = 0.0
+size = Vector3(3, 0.5, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_n4e4m"]
+size = Vector3(3, 0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tyo5e"]
+albedo_color = Color(0.312389, 0.175839, 9.62615e-08, 1)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gegd7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vceju"]
 margin = 0.0
@@ -56,7 +255,7 @@ backlight = Color(1, 0.129412, 0.117647, 0.243137)
 [sub_resource type="BoxShape3D" id="BoxShape3D_cbq04"]
 size = Vector3(17, 10, 20)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_8ccv0"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0hrte"]
 resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("7_tv0ue")
@@ -91,7 +290,7 @@ _surfaces = [{
 "format": 34359742495,
 "index_count": 12,
 "index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 3, 0, 1, 0, 0, 0, 4, 0, 5, 0, 6, 0, 7, 0, 5, 0, 4, 0),
-"material": SubResource("ShaderMaterial_8ccv0"),
+"material": SubResource("ShaderMaterial_0hrte"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
@@ -107,7 +306,7 @@ buffer = PackedFloat32Array(-0.916878, 0, -0.399167, 9.31635, 0, 1, 0, -0.110828
 [sub_resource type="BoxShape3D" id="BoxShape3D_k78v6"]
 size = Vector3(10, 0.01, 14)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_5x0rs"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n7qgb"]
 resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("7_tv0ue")
@@ -142,7 +341,7 @@ _surfaces = [{
 "format": 34359742495,
 "index_count": 12,
 "index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 3, 0, 1, 0, 0, 0, 4, 0, 5, 0, 6, 0, 7, 0, 5, 0, 4, 0),
-"material": SubResource("ShaderMaterial_5x0rs"),
+"material": SubResource("ShaderMaterial_n7qgb"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
@@ -157,9 +356,503 @@ buffer = PackedFloat32Array(0.481605, 0, -0.876388, 1.04888, 0, 1, 0, 0.005, 0.8
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_j4vd8")
+bomb_scene = ExtResource("2_qcsk7")
 
-[node name="house" parent="." instance=ExtResource("1_uo6t7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="House" type="Node3D" parent="." groups=["House"]]
+
+[node name="floor" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/floor"]
+shape = SubResource("BoxShape3D_fpi2m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/floor"]
+mesh = SubResource("BoxMesh_i3yk8")
+surface_material_override/0 = SubResource("StandardMaterial3D_if1km")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/floor"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D3" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 7.25)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D3"]
+shape = SubResource("BoxShape3D_70nxu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D3"]
+mesh = SubResource("BoxMesh_qhgsx")
+surface_material_override/0 = SubResource("StandardMaterial3D_v31yu")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D3"]
+stream = ExtResource("4_i6ppy")
+
+[node name="ceiling1" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.75, 2.50048)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/ceiling1"]
+shape = SubResource("BoxShape3D_ylugk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/ceiling1"]
+mesh = SubResource("BoxMesh_6xa8x")
+skeleton = NodePath("../CollisionShape3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_ykdnn")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/ceiling1"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D4" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 2.25, -2.25)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D4"]
+mesh = SubResource("BoxMesh_66ers")
+skeleton = NodePath("../CollisionShape3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_ser48")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D4"]
+shape = SubResource("BoxShape3D_0htum")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D4"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.25, 2.25, -0.8)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D"]
+shape = SubResource("BoxShape3D_hgcv6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D"]
+mesh = SubResource("BoxMesh_vys7i")
+surface_material_override/0 = SubResource("StandardMaterial3D_4o8uc")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D2" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.25, 2.25, -0.8)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D2"]
+shape = SubResource("BoxShape3D_hgcv6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D2"]
+mesh = SubResource("BoxMesh_vys7i")
+surface_material_override/0 = SubResource("StandardMaterial3D_4o8uc")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D2"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D5" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.25, -0.8)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D5"]
+shape = SubResource("BoxShape3D_3s8t0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D5"]
+mesh = SubResource("BoxMesh_renb8")
+surface_material_override/0 = SubResource("StandardMaterial3D_61g5n")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D5"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D6" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.25, 3.71)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D6"]
+shape = SubResource("BoxShape3D_m1fxp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D6"]
+mesh = SubResource("BoxMesh_xu4qh")
+surface_material_override/0 = SubResource("StandardMaterial3D_5deqf")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D6"]
+stream = ExtResource("4_i6ppy")
+
+[node name="secondStory" type="Node3D" parent="House"]
+transform = Transform3D(0.7, 0, 0, 0, 1, 0, 0, 0, 0.5, -0.0161076, 5.54002, 2.16778)
+
+[node name="RigidBody3D3" type="RigidBody3D" parent="House/secondStory"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 7.25)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/secondStory/RigidBody3D3"]
+shape = SubResource("BoxShape3D_70nxu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/secondStory/RigidBody3D3"]
+mesh = SubResource("BoxMesh_qhgsx")
+surface_material_override/0 = SubResource("StandardMaterial3D_v31yu")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/secondStory/RigidBody3D3"]
+stream = ExtResource("4_i6ppy")
+
+[node name="ceiling1" type="RigidBody3D" parent="House/secondStory"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.75, 2.50048)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/secondStory/ceiling1"]
+shape = SubResource("BoxShape3D_ylugk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/secondStory/ceiling1"]
+mesh = SubResource("BoxMesh_6xa8x")
+skeleton = NodePath("../CollisionShape3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_ykdnn")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/secondStory/ceiling1"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D4" type="RigidBody3D" parent="House/secondStory"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 2.25, -2.25)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/secondStory/RigidBody3D4"]
+mesh = SubResource("BoxMesh_66ers")
+skeleton = NodePath("../CollisionShape3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_ser48")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/secondStory/RigidBody3D4"]
+shape = SubResource("BoxShape3D_0htum")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/secondStory/RigidBody3D4"]
+stream = ExtResource("4_i6ppy")
+
+[node name="wall" type="Node3D" parent="House/secondStory"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.75, 2.25, 7.25)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="House/secondStory/wall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/secondStory/wall/RigidBody3D"]
+shape = SubResource("BoxShape3D_bn6by")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/secondStory/wall/RigidBody3D"]
+mesh = SubResource("BoxMesh_3yt4i")
+surface_material_override/0 = SubResource("StandardMaterial3D_epkxa")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/secondStory/wall/RigidBody3D"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D2" type="RigidBody3D" parent="House/secondStory/wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, -3.25)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/secondStory/wall/RigidBody3D2"]
+shape = SubResource("BoxShape3D_0nhdi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/secondStory/wall/RigidBody3D2"]
+mesh = SubResource("BoxMesh_kokuc")
+surface_material_override/0 = SubResource("StandardMaterial3D_kuppi")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/secondStory/wall/RigidBody3D2"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D3" type="RigidBody3D" parent="House/secondStory/wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -3.25)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/secondStory/wall/RigidBody3D3"]
+shape = SubResource("BoxShape3D_7opda")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/secondStory/wall/RigidBody3D3"]
+mesh = SubResource("BoxMesh_jgxnp")
+surface_material_override/0 = SubResource("StandardMaterial3D_e6vl1")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/secondStory/wall/RigidBody3D3"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D4" type="RigidBody3D" parent="House/secondStory/wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/secondStory/wall/RigidBody3D4"]
+shape = SubResource("BoxShape3D_s1foj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/secondStory/wall/RigidBody3D4"]
+mesh = SubResource("BoxMesh_cx5vp")
+surface_material_override/0 = SubResource("StandardMaterial3D_r6rek")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/secondStory/wall/RigidBody3D4"]
+stream = ExtResource("4_i6ppy")
+
+[node name="wall2" type="Node3D" parent="House/secondStory"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, 2.25, 7.25)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="House/secondStory/wall2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/secondStory/wall2/RigidBody3D"]
+shape = SubResource("BoxShape3D_bn6by")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/secondStory/wall2/RigidBody3D"]
+mesh = SubResource("BoxMesh_3yt4i")
+surface_material_override/0 = SubResource("StandardMaterial3D_epkxa")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/secondStory/wall2/RigidBody3D"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D2" type="RigidBody3D" parent="House/secondStory/wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, -3.25)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/secondStory/wall2/RigidBody3D2"]
+shape = SubResource("BoxShape3D_0nhdi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/secondStory/wall2/RigidBody3D2"]
+mesh = SubResource("BoxMesh_kokuc")
+surface_material_override/0 = SubResource("StandardMaterial3D_kuppi")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/secondStory/wall2/RigidBody3D2"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D3" type="RigidBody3D" parent="House/secondStory/wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -3.25)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/secondStory/wall2/RigidBody3D3"]
+shape = SubResource("BoxShape3D_7opda")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/secondStory/wall2/RigidBody3D3"]
+mesh = SubResource("BoxMesh_jgxnp")
+surface_material_override/0 = SubResource("StandardMaterial3D_e6vl1")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/secondStory/wall2/RigidBody3D3"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D4" type="RigidBody3D" parent="House/secondStory/wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/secondStory/wall2/RigidBody3D4"]
+shape = SubResource("BoxShape3D_s1foj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/secondStory/wall2/RigidBody3D4"]
+mesh = SubResource("BoxMesh_cx5vp")
+surface_material_override/0 = SubResource("StandardMaterial3D_r6rek")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/secondStory/wall2/RigidBody3D4"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D7" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.254, -4.75)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D7"]
+shape = SubResource("BoxShape3D_r4oer")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D7"]
+mesh = SubResource("BoxMesh_ryrfu")
+skeleton = NodePath("../../RigidBody3D7")
+surface_material_override/0 = SubResource("StandardMaterial3D_gvu2a")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D7"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D8" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, -4.5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D8"]
+mesh = SubResource("BoxMesh_hcgdn")
+skeleton = NodePath("../CollisionShape3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_e3o8k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D8"]
+shape = SubResource("BoxShape3D_b6h0o")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D8"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D9" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, -4.25)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D9"]
+shape = SubResource("BoxShape3D_sfps7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D9"]
+mesh = SubResource("BoxMesh_j3dr5")
+skeleton = NodePath("../CollisionShape3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_fpn0y")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D9"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D10" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, -4)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D10"]
+shape = SubResource("BoxShape3D_dq7r0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D10"]
+mesh = SubResource("BoxMesh_8jtn2")
+skeleton = NodePath("../../RigidBody3D7")
+surface_material_override/0 = SubResource("StandardMaterial3D_74i55")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D10"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D11" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, -3.75)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D11"]
+shape = SubResource("BoxShape3D_mt2eo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D11"]
+mesh = SubResource("BoxMesh_00l5h")
+skeleton = NodePath("../../RigidBody3D7")
+surface_material_override/0 = SubResource("StandardMaterial3D_edl3i")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D11"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D12" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.75, -3.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D12"]
+shape = SubResource("BoxShape3D_8l76j")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D12"]
+mesh = SubResource("BoxMesh_0f6l3")
+skeleton = NodePath("../../RigidBody3D7")
+surface_material_override/0 = SubResource("StandardMaterial3D_ftht2")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D12"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D13" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.25, -3.25)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D13"]
+shape = SubResource("BoxShape3D_8od7f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D13"]
+mesh = SubResource("BoxMesh_agutu")
+surface_material_override/0 = SubResource("StandardMaterial3D_7fgy2")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D13"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D14" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.75, -3)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D14"]
+shape = SubResource("BoxShape3D_36ck8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D14"]
+mesh = SubResource("BoxMesh_cqv21")
+surface_material_override/0 = SubResource("StandardMaterial3D_756bf")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D14"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D15" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.25, -2.75)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D15"]
+shape = SubResource("BoxShape3D_42tj2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D15"]
+mesh = SubResource("BoxMesh_n4e4m")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyo5e")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D15"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D16" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.75, 2.25, 7.25)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D16"]
+shape = SubResource("BoxShape3D_bn6by")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D16"]
+mesh = SubResource("BoxMesh_3yt4i")
+skeleton = NodePath("../../RigidBody3D16")
+surface_material_override/0 = SubResource("StandardMaterial3D_epkxa")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D16"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D17" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.75, 2.5, 4)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D17"]
+shape = SubResource("BoxShape3D_0nhdi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D17"]
+mesh = SubResource("BoxMesh_kokuc")
+skeleton = NodePath("../../RigidBody3D16")
+surface_material_override/0 = SubResource("StandardMaterial3D_kuppi")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D17"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D18" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.75, 0.25, 4)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D18"]
+shape = SubResource("BoxShape3D_7opda")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D18"]
+mesh = SubResource("BoxMesh_jgxnp")
+skeleton = NodePath("../../RigidBody3D16")
+surface_material_override/0 = SubResource("StandardMaterial3D_e6vl1")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D18"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D19" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.75, 2.25, -0.75)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D19"]
+shape = SubResource("BoxShape3D_s1foj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D19"]
+mesh = SubResource("BoxMesh_cx5vp")
+skeleton = NodePath("../../RigidBody3D16")
+surface_material_override/0 = SubResource("StandardMaterial3D_r6rek")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D19"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D20" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, 2.25, 7.25)
+physics_material_override = SubResource("PhysicsMaterial_gegd7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D20"]
+shape = SubResource("BoxShape3D_bn6by")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D20"]
+mesh = SubResource("BoxMesh_3yt4i")
+skeleton = NodePath("../../RigidBody3D20")
+surface_material_override/0 = SubResource("StandardMaterial3D_epkxa")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D20"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D21" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, 2.5, 4)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D21"]
+shape = SubResource("BoxShape3D_0nhdi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D21"]
+mesh = SubResource("BoxMesh_kokuc")
+skeleton = NodePath("../../RigidBody3D20")
+surface_material_override/0 = SubResource("StandardMaterial3D_kuppi")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D21"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D22" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, 0.25, 4)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D22"]
+shape = SubResource("BoxShape3D_7opda")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D22"]
+mesh = SubResource("BoxMesh_jgxnp")
+skeleton = NodePath("../../RigidBody3D20")
+surface_material_override/0 = SubResource("StandardMaterial3D_e6vl1")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D22"]
+stream = ExtResource("4_i6ppy")
+
+[node name="RigidBody3D23" type="RigidBody3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, 2.25, -0.75)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/RigidBody3D23"]
+shape = SubResource("BoxShape3D_s1foj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/RigidBody3D23"]
+mesh = SubResource("BoxMesh_cx5vp")
+skeleton = NodePath("../../RigidBody3D20")
+surface_material_override/0 = SubResource("StandardMaterial3D_r6rek")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/RigidBody3D23"]
+stream = ExtResource("4_i6ppy")
 
 [node name="ground" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.360828, 0)
@@ -187,13 +880,14 @@ visible = false
 script = ExtResource("2_16uq1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, -0.000953674, -12.5742)
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 2.08165e-12, 2.08165e-12, 2.08165e-12)
 shape = SubResource("SeparationRayShape3D_p3k6w")
+disabled = true
 
 [node name="Camera" type="Node3D" parent="CharacterBody3D"]
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Camera"]
-transform = Transform3D(-0.999986, 0, -0.00530571, 0, 1, 0, 0.00530571, 0, -0.999986, 2.08165e-12, 0, -12.575)
+transform = Transform3D(-1, 3.48787e-16, 8.74228e-08, 3.48787e-16, 1, -3.48787e-16, -8.74228e-08, -3.48787e-16, -1, 2.08165e-12, 0, 0)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("4_08ra7")
@@ -212,21 +906,21 @@ transform = Transform3D(0.87302, -0.167459, 0.458032, -0.338372, -0.884342, 0.32
 visible = false
 light_energy = 0.5
 
-[node name="Node3D" type="Node3D" parent="."]
+[node name="Win" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.18457, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Win"]
 transform = Transform3D(1, 0, 0, 0, 0.999765, -0.0216751, 0, 0.0216751, 0.999765, 0, 0, 0)
 mesh = SubResource("QuadMesh_2lcm0")
 surface_material_override/0 = SubResource("StandardMaterial3D_a68ji")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Win"]
 mesh = SubResource("QuadMesh_2l0qj")
 surface_material_override/0 = SubResource("StandardMaterial3D_ao6av")
 
-[node name="Area3D" type="Area3D" parent="Node3D"]
+[node name="Area3D" type="Area3D" parent="Win"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Win/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 shape = SubResource("BoxShape3D_cbq04")
 
