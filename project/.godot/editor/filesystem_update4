@@ -2,5 +2,7 @@ res://source/main.tscn
 res://source/premise.tscn
 res://source/win_screen.tscn
 res://source/instructions.tscn
+res://source/flower.tscn
+res://main.tscn
 res://source/instructions.gd
-res://premise.gd
+res://source/main.gd
