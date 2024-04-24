@@ -1,8 +1,104 @@
-[gd_scene load_steps=4 format=3 uid="uid://b11hvhhkgv8s1"]
+[gd_scene load_steps=9 format=3 uid="uid://b11hvhhkgv8s1"]
 
 [ext_resource type="Texture2D" uid="uid://c17xqi648gxeu" path="res://source/Screenshot 2024-04-11 at 6.46.26 PM.png" id="1_sxxgq"]
+[ext_resource type="Script" path="res://premise.gd" id="1_tvqrk"]
 [ext_resource type="Texture2D" uid="uid://bwvk4hcnr3sbt" path="res://source/Screenshot 2024-04-11 at 7.50.19 PM.png" id="2_6sjmt"]
 [ext_resource type="AudioStream" uid="uid://dbscbgmlnjokm" path="res://source/audio/click2.ogg" id="3_6dse7"]
+
+[sub_resource type="Animation" id="Animation_12til"]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fader:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"changeScene"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_j722k"]
+resource_name = "fadeIn"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fader:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fader")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"hide"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_28m87"]
+resource_name = "fadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fader:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"changeScene"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_134w6"]
+_data = {
+"RESET": SubResource("Animation_12til"),
+"fadeIn": SubResource("Animation_j722k"),
+"fadeOut": SubResource("Animation_28m87")
+}
 
 [node name="Premise" type="Control"]
 layout_mode = 3
@@ -11,6 +107,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_tvqrk")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -94,3 +191,17 @@ text = "Next"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_6dse7")
+
+[node name="Fader" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_134w6")
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

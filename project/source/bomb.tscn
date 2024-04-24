@@ -1,15 +1,42 @@
-[gd_scene load_steps=13 format=3 uid="uid://c0tkv43s88ehi"]
+[gd_scene load_steps=16 format=3 uid="uid://c0tkv43s88ehi"]
 
 [ext_resource type="Script" path="res://source/bomb.gd" id="1_g21xy"]
 [ext_resource type="Texture2D" uid="uid://dcxti7wq0xkc" path="res://source/particle_sprite_smoke.webp" id="1_vs2vt"]
 [ext_resource type="AudioStream" uid="uid://cregyvq5gos2p" path="res://source/audio/explosion sound - 4_7_24, 2.12 PM.mp3" id="2_pckmg"]
 [ext_resource type="AudioStream" uid="uid://es3bos7uqbn2" path="res://source/audio/impactGlass_medium_002.ogg" id="3_hwfcp"]
+[ext_resource type="ArrayMesh" uid="uid://cvxu5hq0j06ec" path="res://source/Bomb.obj" id="5_jequn"]
+[ext_resource type="Texture2D" uid="uid://drp0konw6ik11" path="res://source/BombAlbedo.png" id="6_0gh6n"]
 
 [sub_resource type="Animation" id="Animation_col64"]
 length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bomb:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.1, 0.1, 0.1)]
+}
 
 [sub_resource type="Animation" id="Animation_dv8jm"]
 resource_name = "explode"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bomb:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.1, 0.1, 0.1), Vector3(0.15, 0.15, 0.15), Vector3(0, 0, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bkved"]
 _data = {
@@ -43,6 +70,9 @@ material = SubResource("StandardMaterial3D_e5y73")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ugb6d"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tcw0s"]
+albedo_texture = ExtResource("6_0gh6n")
+
 [node name="bomb" type="Node3D"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 script = ExtResource("1_g21xy")
@@ -71,6 +101,7 @@ stream = ExtResource("3_hwfcp")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
 mesh = SubResource("SphereMesh_qk3ym")
 
 [node name="Area3D" type="Area3D" parent="."]
@@ -78,6 +109,11 @@ mesh = SubResource("SphereMesh_qk3ym")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 0, 0, 0)
 shape = SubResource("SphereShape3D_ugb6d")
+
+[node name="Bomb" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.0206421, 0.0244216, 0)
+mesh = ExtResource("5_jequn")
+surface_material_override/0 = SubResource("StandardMaterial3D_tcw0s")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

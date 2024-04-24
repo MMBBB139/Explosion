@@ -1,7 +1,7 @@
 extends Node3D
 
 const RAY_LENGTH = 1000
-@export var bomb_scene: PackedScene
+var bomb_scene = preload("res://source/bomb.tscn")
 var bomb
 var bombs = []
 var bombsplaced = 0
@@ -10,10 +10,13 @@ signal bomb_placed
 	
 func _ready():
 	randomize()
+	$AnimationPlayer.play("fadeIn")
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	if Input.is_action_just_pressed("TestInput"):
+		won()
 	if Input.is_action_pressed("placebomb"):
 		if !bomb:
 			bomb = bomb_scene.instantiate()
@@ -39,3 +42,29 @@ func _physics_process(delta):
 
 func _on_audio_stream_player_3d_finished():
 	$AudioStreamPlayer3D.play();
+
+func won():
+	print("won triggered")
+	$house.hide()
+	$Win.hide()
+	$house.queue_free()
+	$newGrass.show()
+	$FlowerCollection.show()
+	$AnimationPlayer.play("flowersFadeIn")
+	#$AnimationPlayer.play("houseFadeOut")
+
+	#$AnimationPlayer.play("fadeOut")
+
+func switchToWin():
+	get_tree().change_scene_to_file("res://source/win_screen.tscn")
+
+
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name == "houseFadesOut":
+		$house.queue_free()
+		$newGrass.show()
+		$FlowerCollection.show()
+		$AnimationPlayer.play("flowersFadeIn")
+	if anim_name == "flowersFadeIn":
+		$Fader.show()
+		$AnimationPlayer.play("fadeOut")
