@@ -1,10 +1,6 @@
 res://source/main.tscn
+res://source/BombsPlacedIndicator.gd
 res://source/win_screen.tscn
 res://source/flower.tscn
 res://source/bomb.tscn
-res://source/main.gd
-res://source/Area3D.gd
-res://source/house.tscn
-res://source/bomb.gd
-res://source/global.gd
 res://source/instructions.tscn

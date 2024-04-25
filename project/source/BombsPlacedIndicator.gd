@@ -8,4 +8,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$Label.text = "Bombs Placed: "+ str(Global.bombsUsed)
+	$Label.text = "Bombs Used: "+ str(Global.bombsUsed)
