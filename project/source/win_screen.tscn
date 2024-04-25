@@ -152,10 +152,6 @@ offset_right = 1111.0
 offset_bottom = 681.0
 theme_override_colors/font_color = Color(0.501961, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
-text = "[instructions here once the mechanics are done]
-
-
-"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -174,7 +170,7 @@ theme_override_colors/icon_hover_pressed_color = Color(0.858824, 0.619608, 0.078
 theme_override_colors/icon_focus_color = Color(0.858824, 0.619608, 0.0784314, 1)
 theme_override_colors/icon_disabled_color = Color(0.858824, 0.619608, 0.0784314, 1)
 theme_override_font_sizes/font_size = 70
-text = "Start
+text = "Restart
 "
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

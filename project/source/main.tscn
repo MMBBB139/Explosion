@@ -1,9 +1,10 @@
-[gd_scene load_steps=36 format=3 uid="uid://dyp4viirq5heh"]
+[gd_scene load_steps=37 format=3 uid="uid://dyp4viirq5heh"]
 
 [ext_resource type="Script" path="res://source/main.gd" id="1_j4vd8"]
 [ext_resource type="Script" path="res://source/CharacterBody3D.gd" id="2_16uq1"]
 [ext_resource type="PackedScene" uid="uid://7jb8qwa6k8uq" path="res://source/house.tscn" id="2_jbuql"]
 [ext_resource type="AudioStream" uid="uid://cei4apxkvssgn" path="res://source/audio/relaxing background music- 4_7_24, 3.09 PM.mp3" id="4_08ra7"]
+[ext_resource type="Script" path="res://source/Area3D.gd" id="5_ng8l4"]
 [ext_resource type="Script" path="res://source/BombsPlacedIndicator.gd" id="5_tjpln"]
 [ext_resource type="PackedScene" uid="uid://b2wbqbeyqhn1r" path="res://source/fail_ui.tscn" id="6_nsgdu"]
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="7_tv0ue"]
@@ -60,7 +61,7 @@ backlight = Color(1, 0.129412, 0.117647, 0.243137)
 [sub_resource type="BoxShape3D" id="BoxShape3D_cbq04"]
 size = Vector3(17, 10, 20)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ljmpa"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h0w5p"]
 resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("7_tv0ue")
@@ -95,7 +96,7 @@ _surfaces = [{
 "format": 34359742495,
 "index_count": 12,
 "index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 3, 0, 1, 0, 0, 0, 4, 0, 5, 0, 6, 0, 7, 0, 5, 0, 4, 0),
-"material": SubResource("ShaderMaterial_ljmpa"),
+"material": SubResource("ShaderMaterial_h0w5p"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
@@ -111,7 +112,7 @@ buffer = PackedFloat32Array(-0.916878, 0, -0.399167, 9.31635, 0, 1, 0, -0.110828
 [sub_resource type="BoxShape3D" id="BoxShape3D_k78v6"]
 size = Vector3(10, 0.01, 14)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_hnxes"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ep8k1"]
 resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("7_tv0ue")
@@ -146,7 +147,7 @@ _surfaces = [{
 "format": 34359742495,
 "index_count": 12,
 "index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 3, 0, 1, 0, 0, 0, 4, 0, 5, 0, 6, 0, 7, 0, 5, 0, 4, 0),
-"material": SubResource("ShaderMaterial_hnxes"),
+"material": SubResource("ShaderMaterial_ep8k1"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
@@ -479,6 +480,7 @@ mesh = SubResource("QuadMesh_2l0qj")
 surface_material_override/0 = SubResource("StandardMaterial3D_ao6av")
 
 [node name="Area3D" type="Area3D" parent="Win"]
+script = ExtResource("5_ng8l4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Win/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)

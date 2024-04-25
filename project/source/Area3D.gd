@@ -1,15 +1,13 @@
-extends Node
+extends Area3D
+var oneTimeUse = true
 
-var bombsUsed
-var recordBombsUsed
-var isWin
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	bombsUsed = 0
-	recordBombsUsed = 100
-	isWin = false
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if oneTimeUse and not has_overlapping_bodies():
+		Global.isWin = true
+		oneTimeUse = false

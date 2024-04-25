@@ -6,7 +6,7 @@ var fixed = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	explosion()
+	pass
 	
 
 func _on_area_3d_body_entered(body):
@@ -27,6 +27,7 @@ func explosion():
 	$smoke.emitting = true
 	$AnimationPlayer.play("explode")
 	$explode.play()
+	Global.bombsUsed +=1
 	for j in items_in_radius:
 		#Getting a direction vector between the bomb and all nearby RigidBodies. This line of code later helps to calculate a trajectory for the Rigidbodies.
 		force_dir = self.position.direction_to(j.position)
@@ -38,7 +39,8 @@ func explosion():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if Input.is_action_just_released("placebomb"):
+		explosion()
 
 func fix():
 	fixed = true

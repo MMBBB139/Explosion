@@ -15,7 +15,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	if Input.is_action_just_pressed("TestInput"):
+	if Global.isWin:
 		won()
 	if Input.is_action_pressed("placebomb"):
 		if !bomb:
@@ -32,12 +32,12 @@ func _physics_process(delta):
 		var result = space_state.intersect_ray(query)
 		if "position" in result:
 			bomb.set_position(result["position"]+Vector3(0,0,0))
-		if Input.is_action_just_released("actuallyplacebomb"):
-			bomb.fix()
-			bomb = null
-			bombsplaced += 1
-			is_ready = false
-			$"BombsPlacedIndicator/Label".text = str("Bombs Placed: ") + str(bombsplaced)
+		#if Input.is_action_just_released("actuallyplacebomb"):
+			#bomb.fix()
+			#bomb = null
+			#bombsplaced += 1
+			#is_ready = false
+			#$"BombsPlacedIndicator/Label".text = str("Bombs Placed: ") + str(bombsplaced)
 	
 
 func _on_audio_stream_player_3d_finished():
@@ -45,12 +45,15 @@ func _on_audio_stream_player_3d_finished():
 
 func won():
 	print("won triggered")
-	$house.hide()
+	#$house.hide()
 	$Win.hide()
 	$house.queue_free()
 	$newGrass.show()
 	$FlowerCollection.show()
 	$AnimationPlayer.play("flowersFadeIn")
+	Global.isWin = false
+	if(Global.bombsUsed < Global.recordBombsUsed):
+		Global.recordBombsUsed = Global.bombsUsed
 	#$AnimationPlayer.play("houseFadeOut")
 
 	#$AnimationPlayer.play("fadeOut")

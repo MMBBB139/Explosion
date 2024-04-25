@@ -148,7 +148,10 @@ offset_right = 1060.0
 offset_bottom = 663.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
-text = "Add instructions here once mechanics are done
+text = "Use \"WASD\" to move forward, leftward, backward, and rightward. 
+Use \"Shift\" to move downward and \"Space\" for upward.
+Hold \"Z\" to see and move the bomb.
+Release \"Z\" to place and explode the bomb.
 
 
 "
@@ -165,10 +168,6 @@ offset_right = 1111.0
 offset_bottom = 681.0
 theme_override_colors/font_color = Color(0.501961, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
-text = "[instructions here once the mechanics are done]
-
-
-"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
